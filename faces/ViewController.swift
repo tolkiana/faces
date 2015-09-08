@@ -8,14 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var selectFaceButton: UIButton!
-    @IBOutlet weak var captureFaceButton: UIButton!
+    let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        imagePicker.delegate = self
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func selectFromPhotos(sender: UIButton){
+        selectFaceFromPhotos()
+    }
+    
+    
+    // MARK: - Private functions
+    
+    func selectFaceFromPhotos(){
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func captureFaceFromCamera(){
+    
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            print(pickedImage)
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
 }
 
