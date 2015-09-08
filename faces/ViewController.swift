@@ -23,6 +23,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         selectFaceFromPhotos()
     }
     
+    @IBAction func selectFromCamera(sender: UIButton){
+        captureFaceFromCamera()
+    }
     
     // MARK: - Private functions
     
@@ -34,7 +37,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func captureFaceFromCamera(){
-    
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     // MARK: - UIImagePickerControllerDelegate
