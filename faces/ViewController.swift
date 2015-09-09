@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView:UIImageView!
+    
     let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -48,7 +50,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            print(pickedImage)
+            imageView.contentMode = .ScaleAspectFit
+            imageView.image = pickedImage
         }
         dismissViewControllerAnimated(true, completion: nil)
         
