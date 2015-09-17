@@ -50,8 +50,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func saveImage(image : UIImage){
         let imageData = NSData(data: UIImagePNGRepresentation(image))
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        var docs: String = paths[0] as! String
-        let fullPath = docs.stringByAppendingPathComponent(kMyCurrentFace)
+        var docs: String = paths[0] as! String 
+        let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
         let result = imageData.writeToFile(fullPath, atomically: true)
     }
     
@@ -59,15 +59,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
         let documentDirectory = NSSearchPathDirectory.DocumentDirectory
         let userDomainMask = NSSearchPathDomainMask.UserDomainMask
+        let paths = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
         
-        if let paths = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true) {
-            if paths.count > 0 {
-                if let dirPath = paths[0] as? String {
+        if paths.count > 0 {
+            if let dirPath = paths[0] as? String {
                 
-                    let readPath = dirPath.stringByAppendingPathComponent(imageName)
-                    let image = UIImage(contentsOfFile: readPath)
-                    return image
-                }
+                let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
+                let image = UIImage(contentsOfFile: readPath)
+                return image
             }
         }
         return nil
@@ -91,7 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             saveImage(pickedImage)
         }
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
+
 }
 

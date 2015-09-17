@@ -156,6 +156,8 @@
 		388CBD3B1B1811B400E862E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Nelida Velázquez";
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				388CBD641B1811B400E862E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388CBD651B1811B400E862E4 /* Build configuration list for PBXNativeTarget "facesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				388CBD671B1811B400E862E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
