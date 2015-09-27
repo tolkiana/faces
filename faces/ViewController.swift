@@ -48,11 +48,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func saveImage(image : UIImage){
-        let imageData = NSData(data: UIImagePNGRepresentation(image))
+        let imageData = NSData(data: UIImagePNGRepresentation(image)!)
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        var docs: String = paths[0] as! String 
+        let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
-        let result = imageData.writeToFile(fullPath, atomically: true)
+        imageData.writeToFile(fullPath, atomically: true)
     }
     
     func imageWithName(imageName: String) -> UIImage? {
@@ -62,8 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let paths = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
         
         if paths.count > 0 {
-            if let dirPath = paths[0] as? String {
-                
+            if let dirPath : String = paths[0] {
                 let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
                 let image = UIImage(contentsOfFile: readPath)
                 return image
@@ -82,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - UIImagePickerControllerDelegate
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController( picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit
