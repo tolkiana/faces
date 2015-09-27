@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, WCSessionDelegate {
 
     @IBOutlet weak var imageView:UIImageView!
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imagePicker.delegate = self
         loadCurrentFace()
+        setupWatchConectivity()
     }
     
     // MARK: - IBActions
@@ -53,6 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
         imageData.writeToFile(fullPath, atomically: true)
+        WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(fullPath), metadata: ["currentFace" : kMyCurrentFace]);
     }
     
     func imageWithName(imageName: String) -> UIImage? {
@@ -76,6 +79,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let myFace = imageWithName(kMyCurrentFace) {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = myFace
+        }
+    }
+    
+    func setupWatchConectivity() {
+    
+        if WCSession.isSupported() {
+            let session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
         }
     }
     
