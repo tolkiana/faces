@@ -20,12 +20,12 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.awakeWithContext(context)
         WCSession.defaultSession().delegate = self
         WCSession.defaultSession().activateSession()
-        loadCurrentFace()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        loadCurrentFace()
     }
 
     override func didDeactivate() {
