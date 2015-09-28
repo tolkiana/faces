@@ -20,7 +20,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        loadCurrentFace()
         setupWatchConectivity()
     }
     
@@ -56,7 +55,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
         imageData.writeToFile(fullPath, atomically: true)
-        WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(fullPath), metadata:nil)
     }
     
     func imageWithName(imageName: String) -> UIImage? {
@@ -68,7 +66,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if paths.count > 0 {
             if let dirPath : String = paths[0] {
                 let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
-                WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(readPath), metadata:nil)
                 let image = UIImage(contentsOfFile: readPath)
                 return image
             }
@@ -81,14 +78,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let myFace = imageWithName(kMyCurrentFace) {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = myFace
+            sendImageUpdateToWatch(myFace)
         }
     }
+    
+    // MARK: - Watch Methods
     
     func setupWatchConectivity() {
     
         if WCSession.isSupported() {
             WCSession.defaultSession().delegate = self
             WCSession.defaultSession().activateSession()
+        }
+    }
+    
+    func sendImageUpdateToWatch(image : UIImage){
+    
+        do{
+            try WCSession.defaultSession().updateApplicationContext([kMyCurrentFace : image]);
+        }
+        catch{
+            print(error)
         }
     }
     
@@ -100,6 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
             saveImage(pickedImage)
+            sendImageUpdateToWatch(pickedImage);
         }
         dismissViewControllerAnimated(true, completion: nil)
     }

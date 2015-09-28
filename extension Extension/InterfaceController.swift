@@ -58,6 +58,12 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     // MARK: - SessionDelegate
     
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        let currentImage : UIImage = applicationContext[kMyCurrentFace] as! UIImage
+        saveImage(currentImage)
+        loadCurrentFace()
+    }
+    
     func session(session: WCSession, didReceiveFile file: WCSessionFile) {
         print("Received File with URL: \(file.fileURL)")
         if let data = NSData(contentsOfURL: file.fileURL) {
