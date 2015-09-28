@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     let kMyCurrentFace = "myFace.png"
+    let session = WCSession.defaultSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
         imageData.writeToFile(fullPath, atomically: true)
-        WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(fullPath), metadata: ["currentFace" : kMyCurrentFace]);
+        WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(fullPath), metadata:nil)
     }
     
     func imageWithName(imageName: String) -> UIImage? {
@@ -67,6 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if paths.count > 0 {
             if let dirPath : String = paths[0] {
                 let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
+                WCSession.defaultSession().transferFile(NSURL.fileURLWithPath(readPath), metadata:nil)
                 let image = UIImage(contentsOfFile: readPath)
                 return image
             }
@@ -85,9 +87,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func setupWatchConectivity() {
     
         if WCSession.isSupported() {
-            let session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
+            WCSession.defaultSession().delegate = self
+            WCSession.defaultSession().activateSession()
         }
     }
     
