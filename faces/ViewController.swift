@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imagePicker.delegate = self
         setupWatchConectivity()
+        loadCurrentFace()
     }
     
     // MARK: - IBActions
@@ -54,6 +55,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
+        sendImageUpdateToWatch(NSURL.fileURLWithPath(fullPath));
+        sendImageNameToWatch()
         imageData.writeToFile(fullPath, atomically: true)
     }
     
@@ -67,6 +70,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let dirPath : String = paths[0] {
                 let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
                 let image = UIImage(contentsOfFile: readPath)
+                sendImageUpdateToWatch(NSURL.fileURLWithPath(readPath))
+                sendImageNameToWatch()
                 return image
             }
         }
@@ -78,7 +83,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let myFace = imageWithName(kMyCurrentFace) {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = myFace
-            sendImageUpdateToWatch(myFace)
         }
     }
     
@@ -92,14 +96,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func sendImageUpdateToWatch(image : UIImage){
+    func sendImageNameToWatch(){
     
         do{
-            try WCSession.defaultSession().updateApplicationContext([kMyCurrentFace : image]);
+            try WCSession.defaultSession().updateApplicationContext(["imageName" : kMyCurrentFace]);
         }
         catch{
             print(error)
         }
+    }
+    
+    func sendImageUpdateToWatch(url : NSURL){
+        
+        WCSession.defaultSession().transferFile(url, metadata: nil);
+        
     }
     
     // MARK: - UIImagePickerControllerDelegate
@@ -110,7 +120,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
             saveImage(pickedImage)
-            sendImageUpdateToWatch(pickedImage);
         }
         dismissViewControllerAnimated(true, completion: nil)
     }

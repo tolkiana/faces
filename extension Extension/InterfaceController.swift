@@ -13,6 +13,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
 
     @IBOutlet weak var myFaceImage: WKInterfaceImage!
+    @IBOutlet weak var myFaceName: WKInterfaceLabel!
     
     let kMyCurrentFace = "myFace.png"
     
@@ -59,9 +60,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     // MARK: - SessionDelegate
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
-        let currentImage : UIImage = applicationContext[kMyCurrentFace] as! UIImage
-        saveImage(currentImage)
-        loadCurrentFace()
+        let currentImage : String = applicationContext["imageName"] as! String
+        myFaceName.setText(currentImage)
     }
     
     func session(session: WCSession, didReceiveFile file: WCSessionFile) {

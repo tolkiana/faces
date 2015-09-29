@@ -10,10 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="extension" customModuleProvider="target">
                     <items>
-                        <imageView height="151" alignment="left" contentMode="scaleAspectFit" id="lqw-0v-GBj"/>
+                        <imageView height="121" alignment="left" contentMode="scaleAspectFit" id="lqw-0v-GBj"/>
+                        <label width="135" height="26" alignment="left" text="Label" id="aZs-Id-Kkh"/>
                     </items>
                     <connections>
                         <outlet property="myFaceImage" destination="lqw-0v-GBj" id="m88-la-0zO"/>
+                        <outlet property="myFaceName" destination="aZs-Id-Kkh" id="y0y-Qi-wDz"/>
                     </connections>
                 </controller>
             </objects>
