@@ -96,6 +96,7 @@
 		38702D531BB8640D00F7021E /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		38702D551BB8640D00F7021E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38702D571BB8640D00F7021E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38822E831BC75B340089650D /* extension Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "extension Extension.entitlements"; sourceTree = "<group>"; };
 		388CBD431B1811B400E862E4 /* faces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388CBD471B1811B400E862E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388CBD481B1811B400E862E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		38702D4A1BB8640D00F7021E /* extension Extension */ = {
 			isa = PBXGroup;
 			children = (
+				38822E831BC75B340089650D /* extension Extension.entitlements */,
 				38702D4D1BB8640D00F7021E /* InterfaceController.swift */,
 				38702D4F1BB8640D00F7021E /* ExtensionDelegate.swift */,
 				38702D511BB8640D00F7021E /* NotificationController.swift */,
@@ -316,6 +318,12 @@
 					};
 					38702D451BB8640D00F7021E = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6ZX8Q22G36;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					388CBD421B1811B400E862E4 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -498,6 +506,7 @@
 		38702D5D1BB8640D00F7021E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "extension Extension/extension Extension.entitlements";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "extension Extension/Info.plist";
@@ -514,6 +523,7 @@
 		38702D5E1BB8640D00F7021E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "extension Extension/extension Extension.entitlements";
 				INFOPLIST_FILE = "extension Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.faces.watchkitapp.watchkitextension;
@@ -674,6 +684,7 @@
 				38702D5E1BB8640D00F7021E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38702D611BB8640D00F7021E /* Build configuration list for PBXNativeTarget "extension" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +693,7 @@
 				38702D5C1BB8640D00F7021E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388CBD3E1B1811B400E862E4 /* Build configuration list for PBXProject "faces" */ = {
 			isa = XCConfigurationList;

@@ -60,26 +60,16 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     // MARK: - SessionDelegate
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
-        let currentImage : String = applicationContext["imageName"] as! String
-        myFaceName.setText(currentImage)
-    }
-    
-    func session(session: WCSession, didReceiveFile file: WCSessionFile) {
-        print("Received File with URL: \(file.fileURL)")
-        if let data = NSData(contentsOfURL: file.fileURL) {
-            if let img = UIImage(data: data) {
-                saveImage(img)
-                loadCurrentFace()
+        
+        if let currentImageData: NSData = applicationContext[kMyCurrentFace] as? NSData{
+            if let image: UIImage = UIImage(data: currentImageData){
+                myFaceImage.setImage(image)
             }
+            saveImage(currentImageData)
         }
     }
     
-    func session(session: WCSession, didFinishFileTransfer fileTransfer: WCSessionFileTransfer, error: NSError?) {
-        print("an error has occurred")
-    }
-    
-    func saveImage(image : UIImage){
-        let imageData = NSData(data: UIImagePNGRepresentation(image)!)
+    func saveImage(imageData : NSData){
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)

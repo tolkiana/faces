@@ -55,9 +55,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let docs: String = paths[0]
         let fullPath = (docs as NSString).stringByAppendingPathComponent(kMyCurrentFace)
-        sendImageUpdateToWatch(NSURL.fileURLWithPath(fullPath));
-        sendImageNameToWatch()
+        compressImage(image)
         imageData.writeToFile(fullPath, atomically: true)
+    }
+    
+    func compressImage(image: UIImage){
+    
+        let imageData = NSData(data: UIImageJPEGRepresentation(image, 0.2)!)
+        
+        do{
+            try WCSession.defaultSession().updateApplicationContext([kMyCurrentFace : imageData]);
+        }
+        catch{
+            print(error)
+        }
     }
     
     func imageWithName(imageName: String) -> UIImage? {
@@ -70,8 +81,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let dirPath : String = paths[0] {
                 let readPath = (dirPath as NSString).stringByAppendingPathComponent(imageName)
                 let image = UIImage(contentsOfFile: readPath)
-                sendImageUpdateToWatch(NSURL.fileURLWithPath(readPath))
-                sendImageNameToWatch()
                 return image
             }
         }
@@ -96,22 +105,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func sendImageNameToWatch(){
-    
-        do{
-            try WCSession.defaultSession().updateApplicationContext(["imageName" : kMyCurrentFace]);
-        }
-        catch{
-            print(error)
-        }
-    }
-    
-    func sendImageUpdateToWatch(url : NSURL){
-        
-        WCSession.defaultSession().transferFile(url, metadata: nil);
-        
-    }
-    
+
     // MARK: - UIImagePickerControllerDelegate
     
     func imagePickerController( picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
