@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  faces
 //
-//  Created by Nelida Velázquez on 5/28/15.
-//  Copyright (c) 2015 Nelida Velázquez. All rights reserved.
+//  Created by Nelida Velázquez on 10/12/15.
+//  Copyright © 2015 Nelida Velázquez. All rights reserved.
 //
 
 import UIKit

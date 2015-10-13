@@ -1,15 +1,15 @@
 //
-//  facesTests.swift
-//  facesTests
+//  facesKitTests.swift
+//  facesKitTests
 //
 //  Created by Nelida Velázquez on 10/12/15.
 //  Copyright © 2015 Nelida Velázquez. All rights reserved.
 //
 
 import XCTest
-@testable import faces
+@testable import facesKit
 
-class facesTests: XCTestCase {
+class facesKitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

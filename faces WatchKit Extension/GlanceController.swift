@@ -1,8 +1,8 @@
 //
 //  GlanceController.swift
-//  extension Extension
+//  faces WatchKit Extension
 //
-//  Created by Nelida Velázquez on 9/27/15.
+//  Created by Nelida Velázquez on 10/12/15.
 //  Copyright © 2015 Nelida Velázquez. All rights reserved.
 //
 
