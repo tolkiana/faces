@@ -19,10 +19,7 @@ class ViewController: UIViewController {
         let ciImage  = CIImage(CGImage:imageView.image!.CGImage!)
         let ciDetector = CIDetector(ofType:CIDetectorTypeFace
             ,context:nil
-            ,options:[
-                CIDetectorAccuracy:CIDetectorAccuracyHigh,
-                CIDetectorSmile:true
-            ]
+            ,options:[CIDetectorAccuracy:CIDetectorAccuracyHigh]
         )
         let features = ciDetector.featuresInImage(ciImage)
         
