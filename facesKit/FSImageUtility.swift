@@ -39,6 +39,14 @@ class FSImageUtility {
     }
     
     func facesImagesInImage(image: UIImage) -> [UIImage]? {
+        let ciImage = CIImage(CGImage: image.CGImage!)
+        
+        let detector = CIDetector(ofType: CIDetectorTypeFace,
+            context: nil,
+            options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+        
+        let features = detector.featuresInImage(ciImage)
+        
         return nil
     }
     
