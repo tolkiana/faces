@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreImage
 
 class FSImageUtility {
 
@@ -30,6 +31,18 @@ class FSImageUtility {
                 return image
             }
         }
+        return nil
+    }
+    
+    func imageContainsFace(image: UIImage) -> Bool {
+        return false;
+    }
+    
+    func facesImagesInImage(image: UIImage) -> [UIImage]? {
+        return nil
+    }
+    
+    func cropfaceImage(image: UIImage) -> UIImage? {
         return nil
     }
 }
