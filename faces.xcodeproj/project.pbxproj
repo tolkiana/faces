@@ -12,8 +12,6 @@
 		38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */; };
 		38C8BBFA1BCC8EEA009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */; };
 		38C8BBFD1BCC8EEA009B6D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */; };
-		38C8BC081BCC8EEA009B6D89 /* facesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC071BCC8EEA009B6D89 /* facesTests.swift */; };
-		38C8BC131BCC8EEA009B6D89 /* facesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC121BCC8EEA009B6D89 /* facesUITests.swift */; };
 		38C8BC181BCC8EEA009B6D89 /* faces WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 38C8BC171BCC8EEA009B6D89 /* faces WatchKit App.app */; };
 		38C8BC1E1BCC8EEA009B6D89 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BC1C1BCC8EEA009B6D89 /* Interface.storyboard */; };
 		38C8BC201BCC8EEA009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BC1F1BCC8EEA009B6D89 /* Assets.xcassets */; };
@@ -25,7 +23,6 @@
 		38C8BC361BCC8EEB009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BC351BCC8EEB009B6D89 /* Assets.xcassets */; };
 		38F1943D1BCC8FED00FB2C35 /* facesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F1943C1BCC8FED00FB2C35 /* facesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F194441BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ASSET_TAGS = (); }; };
-		38F1944B1BCC8FED00FB2C35 /* facesKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1944A1BCC8FED00FB2C35 /* facesKitTests.swift */; };
 		38F1944F1BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; settings = {ASSET_TAGS = (); }; };
@@ -128,10 +125,8 @@
 		38C8BBFC1BCC8EEA009B6D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C8BBFE1BCC8EEA009B6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C8BC031BCC8EEA009B6D89 /* facesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38C8BC071BCC8EEA009B6D89 /* facesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facesTests.swift; sourceTree = "<group>"; };
 		38C8BC091BCC8EEA009B6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C8BC0E1BCC8EEA009B6D89 /* facesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38C8BC121BCC8EEA009B6D89 /* facesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facesUITests.swift; sourceTree = "<group>"; };
 		38C8BC141BCC8EEA009B6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C8BC171BCC8EEA009B6D89 /* faces WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "faces WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8BC1D1BCC8EEA009B6D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -149,7 +144,6 @@
 		38F1943C1BCC8FED00FB2C35 /* facesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facesKit.h; sourceTree = "<group>"; };
 		38F1943E1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F194431BCC8FED00FB2C35 /* facesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F1944A1BCC8FED00FB2C35 /* facesKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facesKitTests.swift; sourceTree = "<group>"; };
 		38F1944C1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,7 +240,6 @@
 		38C8BC061BCC8EEA009B6D89 /* facesTests */ = {
 			isa = PBXGroup;
 			children = (
-				38C8BC071BCC8EEA009B6D89 /* facesTests.swift */,
 				38C8BC091BCC8EEA009B6D89 /* Info.plist */,
 			);
 			path = facesTests;
@@ -255,7 +248,6 @@
 		38C8BC111BCC8EEA009B6D89 /* facesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				38C8BC121BCC8EEA009B6D89 /* facesUITests.swift */,
 				38C8BC141BCC8EEA009B6D89 /* Info.plist */,
 			);
 			path = facesUITests;
@@ -306,7 +298,6 @@
 		38F194491BCC8FED00FB2C35 /* facesKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				38F1944A1BCC8FED00FB2C35 /* facesKitTests.swift */,
 				38F1944C1BCC8FED00FB2C35 /* Info.plist */,
 			);
 			path = facesKitTests;
@@ -586,7 +577,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C8BC081BCC8EEA009B6D89 /* facesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +584,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C8BC131BCC8EEA009B6D89 /* facesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +610,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F1944B1BCC8FED00FB2C35 /* facesKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,10 +940,12 @@
 		38F194531BCC8FED00FB2C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = facesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.facesKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/faces.app/faces";
 			};
 			name = Debug;
@@ -963,6 +953,7 @@
 		38F194541BCC8FED00FB2C35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = facesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.facesKitTests;
