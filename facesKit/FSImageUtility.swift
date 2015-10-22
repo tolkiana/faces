@@ -39,7 +39,29 @@ class FSImageUtility {
     }
     
     func facesImagesInImage(image: UIImage) -> [UIImage]? {
-        return nil
+
+        var faces = [UIImage]()
+        let margin: CGFloat = 60.0
+        
+        for feature in featuresInImage(image){
+            let face = feature as! CIFaceFeature
+            
+            // Obtaining the rect where the face is adding some margin to the original rect
+            var faceRect = face.bounds
+            faceRect.origin.y = image.size.height - faceRect.origin.y - faceRect.size.height - margin
+            faceRect.size.height = faceRect.size.height + margin
+            let faceWidht = faceRect.size.height
+            
+            if face.hasLeftEyePosition && face.hasRightEyePosition {
+                let middle = (face.leftEyePosition.x + face.rightEyePosition.x) / 2
+                faceRect.origin.x = middle - faceWidht/2
+                faceRect.size.width = faceWidht
+            }
+            
+            faces.append(croppIngimage(image, toRect: faceRect))
+        }
+        
+        return faces;
     }
     
     // MARK: Private methods
