@@ -42,10 +42,6 @@ class FSImageUtility {
         return nil
     }
     
-    func cropfaceImage(image: UIImage) -> UIImage? {
-        return nil
-    }
-    
     // MARK: Private methods
     
     private func featuresInImage(image: UIImage) -> [CIFeature] {
@@ -57,6 +53,13 @@ class FSImageUtility {
             options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
         
         return detector.featuresInImage(ciImage)
+    }
+    
+    private func croppIngimage(imageToCrop:UIImage, toRect rect:CGRect) -> UIImage{
+        
+        let imageRef:CGImageRef = CGImageCreateWithImageInRect(imageToCrop.CGImage, rect)!
+        let cropped:UIImage = UIImage(CGImage:imageRef)
+        return cropped
     }
 
 }
