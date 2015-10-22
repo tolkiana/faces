@@ -35,7 +35,7 @@ class FSImageUtility {
     }
     
     func imageContainsFace(image: UIImage) -> Bool {
-        return false;
+        return featuresInImage(image).count > 0;
     }
     
     func facesImagesInImage(image: UIImage) -> [UIImage]? {
@@ -45,4 +45,18 @@ class FSImageUtility {
     func cropfaceImage(image: UIImage) -> UIImage? {
         return nil
     }
+    
+    // MARK: Private methods
+    
+    private func featuresInImage(image: UIImage) -> [CIFeature] {
+        
+        let ciImage = CIImage(CGImage: image.CGImage!)
+        
+        let detector = CIDetector(ofType: CIDetectorTypeFace,
+            context: nil,
+            options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+        
+        return detector.featuresInImage(ciImage)
+    }
+
 }
