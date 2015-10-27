@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38104B091BDF129D0055E84A /* FaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */; };
 		38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */; };
 		38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38104B091BDF129D0055E84A /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		38C8BBEF1BCC8EEA009B6D89 /* faces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FacesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -229,6 +231,7 @@
 			children = (
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
 				38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */,
+				38104B091BDF129D0055E84A /* FaceViewController.swift */,
 				38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */,
 				38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */,
 				38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */,
@@ -568,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */,
 				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
 			);

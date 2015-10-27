@@ -58,7 +58,7 @@
         <!--Create Face-->
         <scene sceneID="p5f-qw-95d">
             <objects>
-                <viewController id="vky-TZ-aGK" sceneMemberID="viewController">
+                <viewController id="vky-TZ-aGK" customClass="FaceViewController" customModule="faces" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XCg-Sn-B7D"/>
                         <viewControllerLayoutGuide type="bottom" id="Yqp-7i-57Z"/>
@@ -97,9 +97,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Face" id="N55-5F-0xh">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L4q-5S-c5K"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="2wk-ar-Umi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L4q-5S-c5K">
+                            <connections>
+                                <action selector="cancel:" destination="vky-TZ-aGK" id="Qhp-OG-Ziw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="2wk-ar-Umi"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="2wk-ar-Umi" id="tLV-p3-3I1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jm0-0u-hk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
