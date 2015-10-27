@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FacesTableViewController.swift
 //  faces
 //
 //  Created by Nelida Velázquez on 10/12/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FacesTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
