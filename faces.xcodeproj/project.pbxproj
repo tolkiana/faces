@@ -28,6 +28,7 @@
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; settings = {ASSET_TAGS = (); }; };
 		4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		4BF5E2331BF1834500CCF95F /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2321BF1834500CCF95F /* Face.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		38F1944C1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
 		4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
+		4BF5E2321BF1834500CCF95F /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		38C8BBF11BCC8EEA009B6D89 /* faces */ = {
 			isa = PBXGroup;
 			children = (
+				4BF5E2311BF182DA00CCF95F /* models */,
 				4BF5E22E1BF1688700CCF95F /* faceCustomization */,
 				4BF5E22D1BF1685C00CCF95F /* facesList */,
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
@@ -323,6 +326,14 @@
 				38104B091BDF129D0055E84A /* FaceViewController.swift */,
 			);
 			name = faceCustomization;
+			sourceTree = "<group>";
+		};
+		4BF5E2311BF182DA00CCF95F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5E2321BF1834500CCF95F /* Face.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,6 +603,7 @@
 			files = (
 				4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */,
 				38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */,
+				4BF5E2331BF1834500CCF95F /* Face.swift in Sources */,
 				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
 			);
