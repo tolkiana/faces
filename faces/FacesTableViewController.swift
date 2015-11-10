@@ -8,18 +8,26 @@
 
 import UIKit
 
-class FacesTableViewController: UIViewController {
+class FacesTableViewController: UIViewController, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    var faces: [Face] = [
+        Face(title: "Matías", emoticon: "😀", imageName: "name"),
+        Face(title: "Mamá", emoticon: "😁", imageName: "name"),
+    ]
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return faces.count
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("FaceCellIdentifier") as! FaceTableViewCell
+        
+        cell.faceTitleLabel.text = faces[indexPath.row].title
+        cell.emoticonLabel.text = faces[indexPath.row].emoticon
+        cell.imageView?.image = UIImage(named: faces[indexPath.row].imageName)
+        
+        return cell
     }
-
-
 }
 
