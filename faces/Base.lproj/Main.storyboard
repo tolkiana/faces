@@ -93,6 +93,9 @@
                                 <rect key="frame" x="137" y="377" width="100" height="40"/>
                                 <animations/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="wa3-35-WJk"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-uL-MQg">
                                 <rect key="frame" x="93" y="125" width="188" height="1"/>
@@ -109,6 +112,9 @@
                                 <rect key="frame" x="87" y="169" width="200" height="200"/>
                                 <animations/>
                                 <state key="normal" image="FacePlaceHolder"/>
+                                <connections>
+                                    <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="3Sj-wW-pFg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select an emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMo-aG-6bE">
                                 <rect key="frame" x="120" y="484" width="135" height="21"/>

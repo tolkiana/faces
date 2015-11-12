@@ -16,10 +16,17 @@ class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     var emojies: [String] = ["😀","😁","😃","😄","😊","😉","😍","😘","😙","😚","☺️",
     "😇","😋","😗","😛","😜","😝","😺","😻","😽"]
 
+    // MARK: IBActions
     
     @IBAction func cancel(sender: UIButton){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func selectFace(sender: UIButton?) {
+        
+    }
+    
+    // MARK: UIPickerViewDataSoruce
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -28,6 +35,8 @@ class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return emojies.count
     }
+    
+    // MARK: UIPickerViewDelegate
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return emojies[row]
