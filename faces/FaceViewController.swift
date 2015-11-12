@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var emojiPickerView: UIPickerView!
@@ -24,6 +24,13 @@ class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBAction func selectFace(sender: UIButton?) {
         
+    }
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     // MARK: UIPickerViewDataSoruce
