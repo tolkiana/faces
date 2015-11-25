@@ -29,6 +29,8 @@
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; settings = {ASSET_TAGS = (); }; };
 		4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		4BF5E2331BF1834500CCF95F /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2321BF1834500CCF95F /* Face.swift */; settings = {ASSET_TAGS = (); }; };
+		4BF5E2351BF41E5C00CCF95F /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */; settings = {ASSET_TAGS = (); }; };
+		4BF5E2371BF41EDF00CCF95F /* EmojiPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,8 @@
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
 		4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
 		4BF5E2321BF1834500CCF95F /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiPickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				38104B091BDF129D0055E84A /* FaceViewController.swift */,
+				4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */,
+				4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */,
 			);
 			name = faceCustomization;
 			sourceTree = "<group>";
@@ -544,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C8BBFD1BCC8EEA009B6D89 /* LaunchScreen.storyboard in Resources */,
+				4BF5E2371BF41EDF00CCF95F /* EmojiPickerView.xib in Resources */,
 				38C8BBFA1BCC8EEA009B6D89 /* Assets.xcassets in Resources */,
 				38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */,
 			);
@@ -604,6 +611,7 @@
 				4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */,
 				38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */,
 				4BF5E2331BF1834500CCF95F /* Face.swift in Sources */,
+				4BF5E2351BF41E5C00CCF95F /* EmojiPickerView.swift in Sources */,
 				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
 			);

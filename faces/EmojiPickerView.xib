@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmojiPickerView" customModule="faces" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zE7-Q4-4Dq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oSw-05-HFJ"/>
+                        <barButtonItem title="Done" id="9EY-Z2-qwH"/>
+                    </items>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-zz-JHM">
+                    <rect key="frame" x="0.0" y="44" width="375" height="190"/>
+                    <animations/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zmF-c2-GrN"/>
+                        <outlet property="delegate" destination="-1" id="OaI-Iu-lng"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pickerView" destination="fMs-zz-JHM" id="TA7-D4-TqZ"/>
+            </connections>
+            <point key="canvasLocation" x="447.5" y="534"/>
+        </view>
+    </objects>
+</document>
