@@ -8,13 +8,10 @@
 
 import UIKit
 
-class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class FaceViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var doneButton: UIBarButtonItem!
-    @IBOutlet var emojiPickerView: UIPickerView!
-    
-    var emojies: [String] = ["😀","😁","😃","😄","😊","😉","😍","😘","😙","😚","☺️",
-    "😇","😋","😗","😛","😜","😝","😺","😻","😽"]
+    @IBOutlet var tableView: UITableView!
 
     // MARK: IBActions
     
@@ -26,30 +23,22 @@ class FaceViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
     }
     
-    // MARK: UITextFieldDelegate
+    // MARK: UITableViewDataSource
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    // MARK: UIPickerViewDataSoruce
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return emojies.count
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
     
-    // MARK: UIPickerViewDelegate
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return emojies[row]
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("TextFieldCellIdentifier") as! TextFiledViewCell
+        cell.placeholder = FaceTextFieldType(rawValue: indexPath.row)?.placeholder()
+        
+        return cell
     }
     
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 40.0
-    }
 }

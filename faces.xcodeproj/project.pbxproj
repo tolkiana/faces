@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38104B091BDF129D0055E84A /* FaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38104B091BDF129D0055E84A /* FaceViewController.swift */; };
 		38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */; };
 		38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */; };
 		38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */; };
@@ -22,15 +22,17 @@
 		38C8BC321BCC8EEB009B6D89 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC311BCC8EEB009B6D89 /* NotificationController.swift */; };
 		38C8BC341BCC8EEB009B6D89 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC331BCC8EEB009B6D89 /* GlanceController.swift */; };
 		38C8BC361BCC8EEB009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BC351BCC8EEB009B6D89 /* Assets.xcassets */; };
+		38D0768F1C2A44E2006298A5 /* TextFiledViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */; };
+		38D076911C2A51C5006298A5 /* FaceTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */; };
 		38F1943D1BCC8FED00FB2C35 /* facesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F1943C1BCC8FED00FB2C35 /* facesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38F194441BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ASSET_TAGS = (); }; };
+		38F194441BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F1944F1BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; settings = {ASSET_TAGS = (); }; };
-		4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		4BF5E2331BF1834500CCF95F /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2321BF1834500CCF95F /* Face.swift */; settings = {ASSET_TAGS = (); }; };
-		4BF5E2351BF41E5C00CCF95F /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */; settings = {ASSET_TAGS = (); }; };
-		4BF5E2371BF41EDF00CCF95F /* EmojiPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */; settings = {ASSET_TAGS = (); }; };
+		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
+		4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */; };
+		4BF5E2331BF1834500CCF95F /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2321BF1834500CCF95F /* Face.swift */; };
+		4BF5E2351BF41E5C00CCF95F /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */; };
+		4BF5E2371BF41EDF00CCF95F /* EmojiPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		38C8BC331BCC8EEB009B6D89 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		38C8BC351BCC8EEB009B6D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C8BC371BCC8EEB009B6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFiledViewCell.swift; sourceTree = "<group>"; };
+		38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTextFieldType.swift; sourceTree = "<group>"; };
 		38F1943A1BCC8FED00FB2C35 /* facesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = facesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F1943C1BCC8FED00FB2C35 /* facesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facesKit.h; sourceTree = "<group>"; };
 		38F1943E1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,8 +332,10 @@
 			isa = PBXGroup;
 			children = (
 				38104B091BDF129D0055E84A /* FaceViewController.swift */,
+				38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */,
 				4BF5E2341BF41E5C00CCF95F /* EmojiPickerView.swift */,
 				4BF5E2361BF41EDF00CCF95F /* EmojiPickerView.xib */,
+				38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */,
 			);
 			name = faceCustomization;
 			sourceTree = "<group>";
@@ -610,7 +616,9 @@
 			files = (
 				4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */,
 				38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */,
+				38D0768F1C2A44E2006298A5 /* TextFiledViewCell.swift in Sources */,
 				4BF5E2331BF1834500CCF95F /* Face.swift in Sources */,
+				38D076911C2A51C5006298A5 /* FaceTextFieldType.swift in Sources */,
 				4BF5E2351BF41E5C00CCF95F /* EmojiPickerView.swift in Sources */,
 				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
