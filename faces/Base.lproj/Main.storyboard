@@ -119,14 +119,14 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-W3-cyn">
-                                <rect key="frame" x="16" y="64" width="343" height="267"/>
+                                <rect key="frame" x="76" y="84" width="223" height="233"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Ps-gua">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="237"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Ps-gua">
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="203"/>
                                         <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-YT-Mcl">
-                                        <rect key="frame" x="0.0" y="237" width="343" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-YT-Mcl">
+                                        <rect key="frame" x="0.0" y="203" width="223" height="30"/>
                                         <state key="normal" title="Edit"/>
                                     </button>
                                 </subviews>
@@ -138,10 +138,10 @@
                             <constraint firstItem="Yqp-7i-57Z" firstAttribute="top" secondItem="vli-2V-8eV" secondAttribute="bottom" id="Gs2-uA-tWL"/>
                             <constraint firstItem="vli-2V-8eV" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.6" id="M9s-nx-CYB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vli-2V-8eV" secondAttribute="trailing" id="Uks-7y-RwU"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" id="Y6y-Q3-bfG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cey-W3-cyn" secondAttribute="trailing" id="d8F-1J-XWH"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" id="go7-pK-1Pd"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.4" id="kfd-fh-h6p"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" constant="20" id="Y6y-Q3-bfG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cey-W3-cyn" secondAttribute="trailing" constant="60" id="d8F-1J-XWH"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" constant="60" id="go7-pK-1Pd"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.35" id="kfd-fh-h6p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Face" id="N55-5F-0xh">
