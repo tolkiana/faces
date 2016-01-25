@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FaceViewController: UIViewController, UITableViewDataSource {
+class FaceViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
@@ -43,6 +43,13 @@ class FaceViewController: UIViewController, UITableViewDataSource {
         cell.placeholder = FaceTextFieldType(rawValue: indexPath.row)?.placeholder()
         
         return cell
+    }
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
