@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Faces-->
@@ -83,42 +84,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZE-Ro-HFf">
-                                <rect key="frame" x="137" y="321" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="MP2-97-Dei"/>
-                                </constraints>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="wa3-35-WJk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-2f-CIb">
-                                <rect key="frame" x="87" y="104" width="200" height="200"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="nX4-Pt-Xue"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="3Sj-wW-pFg"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vli-2V-8eV">
-                                <rect key="frame" x="0.0" y="369" width="375" height="298"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vli-2V-8eV">
+                                <rect key="frame" x="16" y="267" width="343" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="298" id="GFM-06-eGX"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCellIdentifier" id="d7m-mj-jbM" customClass="TextFiledViewCell" customModule="faces" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7m-mj-jbM" id="DId-wj-fg0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-3D-9yx">
-                                                    <rect key="frame" x="25" y="5" width="322" height="30"/>
+                                                    <rect key="frame" x="25" y="5" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -140,18 +118,20 @@
                                     <outlet property="delegate" destination="vky-TZ-aGK" id="WMN-L7-RGJ"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-W3-cyn">
+                                <rect key="frame" x="16" y="64" width="343" height="267"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="vli-2V-8eV" secondAttribute="trailing" constant="-20" id="8On-NV-8eY"/>
-                            <constraint firstItem="ZMO-2f-CIb" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" constant="40" id="F8O-bI-54p"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZMO-2f-CIb" secondAttribute="trailing" constant="68" id="Vq5-z4-VpU"/>
-                            <constraint firstItem="xZE-Ro-HFf" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" constant="117" id="cXI-lx-PO6"/>
-                            <constraint firstItem="vli-2V-8eV" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" constant="-20" id="guk-vx-wdS"/>
-                            <constraint firstItem="Yqp-7i-57Z" firstAttribute="top" secondItem="vli-2V-8eV" secondAttribute="bottom" id="hBe-i4-caD"/>
-                            <constraint firstItem="xZE-Ro-HFf" firstAttribute="top" secondItem="ZMO-2f-CIb" secondAttribute="bottom" constant="17" id="hUd-9B-I64"/>
-                            <constraint firstItem="ZMO-2f-CIb" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" constant="67" id="qUY-Sk-Nbr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xZE-Ro-HFf" secondAttribute="trailing" constant="118" id="snh-kz-Jj3"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" id="4Jk-KD-pI0"/>
+                            <constraint firstItem="Yqp-7i-57Z" firstAttribute="top" secondItem="vli-2V-8eV" secondAttribute="bottom" id="Gs2-uA-tWL"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.6" id="M9s-nx-CYB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vli-2V-8eV" secondAttribute="trailing" id="Uks-7y-RwU"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" id="Y6y-Q3-bfG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cey-W3-cyn" secondAttribute="trailing" id="d8F-1J-XWH"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" id="go7-pK-1Pd"/>
+                            <constraint firstItem="Cey-W3-cyn" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.4" id="kfd-fh-h6p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Face" id="N55-5F-0xh">
