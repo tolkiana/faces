@@ -15,12 +15,16 @@ class FaceViewController: UIViewController, UITableViewDataSource {
 
     // MARK: IBActions
     
-    @IBAction func cancel(sender: UIButton){
+    @IBAction func cancel(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func selectFace(sender: UIButton?) {
         
+    }
+    
+    @IBAction func done(sender: UIButton) {
+    
     }
     
     // MARK: UITableViewDataSource

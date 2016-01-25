@@ -156,7 +156,11 @@
                                 <action selector="cancel:" destination="vky-TZ-aGK" id="Qhp-OG-Ziw"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="2wk-ar-Umi"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="2wk-ar-Umi">
+                            <connections>
+                                <action selector="done:" destination="vky-TZ-aGK" id="qbH-pK-6ct"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
