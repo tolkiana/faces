@@ -124,10 +124,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Ps-gua">
                                         <rect key="frame" x="0.0" y="0.0" width="223" height="203"/>
                                         <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchDragInside" id="AYW-b7-yah"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-YT-Mcl">
                                         <rect key="frame" x="0.0" y="203" width="223" height="30"/>
                                         <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchDragInside" id="Efi-Nu-SI9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
