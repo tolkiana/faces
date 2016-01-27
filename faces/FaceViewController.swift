@@ -12,7 +12,23 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITextFieldDe
 
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
+    private var activeTextField: UITextField?
+    private var originalContentInset: UIEdgeInsets?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: Selector("keyboardWillShow:"),
+            name: UIKeyboardWillShowNotification,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: Selector("keyboardWillHide:"),
+            name: UIKeyboardWillHideNotification,
+            object: nil)
+    }
+    
     // MARK: IBActions
     
     @IBAction func cancel(sender: UIButton) {
@@ -52,4 +68,35 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITextFieldDe
         return true
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        self.activeTextField = textField
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.activeTextField = textField
+    }
+    
+    // MARK: Keyboard notifications
+    
+    func keyboardWillShow(notification: NSNotification) {
+    
+        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue(), let cell = self.activeTextField?.superview?.superview as? TextFiledViewCell  else {
+            return
+        }
+        
+        originalContentInset = tableView.contentInset
+        tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+        tableView.scrollToRowAtIndexPath(tableView.indexPathForCell(cell)!,
+            atScrollPosition: UITableViewScrollPosition.Top,
+            animated: true)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        
+        guard let contentInset = originalContentInset else {
+            return
+        }
+        
+        tableView.contentInset = contentInset
+    }
 }
