@@ -128,10 +128,16 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="ygu-IC-Tfp" secondAttribute="height" multiplier="1:1" id="UEr-cZ-bqU"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="U9h-6w-rzv"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-av-hWY">
                                                     <rect key="frame" x="82" y="189" width="179" height="30"/>
                                                     <state key="normal" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="jnT-ts-4aS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
