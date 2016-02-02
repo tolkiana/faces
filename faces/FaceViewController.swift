@@ -8,13 +8,26 @@
 
 import UIKit
 
+enum TableSection: Int  {
+    case Image, Info
+}
+
 class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
+    // Oulets
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
+
+    // Variables
     private var activeTextField: UITextField?
     private var originalContentInset: UIEdgeInsets?
 
+    // Constants
+    static let TextFiledCellHeight = CGFloat(43.0)
+    static let TextFiledCellIdentifier = "TextFieldCellIdentifier"
+    static let ImageCellHeight = CGFloat(240.0)
+    static let ImageCellIdentifier = "ImageCellIdentifier"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,26 +63,39 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 3
+        switch section {
+        case TableSection.Image.rawValue:
+            return 1
+        default:
+            return 3
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ImageCellIdentifier")!
-            return cell
+        switch indexPath.section {
+        case TableSection.Image.rawValue:
+            return tableView.dequeueReusableCellWithIdentifier(self.dynamicType.ImageCellIdentifier)!
+        default:
+            return textFieldCell(tableView, row: indexPath.row)
         }
-        else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TextFieldCellIdentifier") as! TextFiledViewCell
-            cell.placeholder = FaceTextFieldType(rawValue: indexPath.row)?.placeholder()
-            return cell
-        }
+    }
+    
+    func textFieldCell(tableView: UITableView, row: Int) -> TextFiledViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(self.dynamicType.TextFiledCellIdentifier) as! TextFiledViewCell
+        cell.placeholder = FaceTextFieldType(rawValue: row)?.placeholder()
+        return cell
     }
     
     // MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 240.0 : 43.0
+        switch indexPath.section {
+        case TableSection.Image.rawValue:
+            return self.dynamicType.ImageCellHeight
+        default:
+            return self.dynamicType.TextFiledCellHeight
+        }
     }
     
     // MARK: UITextFieldDelegate
