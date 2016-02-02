@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FaceViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
+class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
@@ -46,19 +46,30 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITextFieldDe
     // MARK: UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return section == 0 ? 1 : 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("TextFieldCellIdentifier") as! TextFiledViewCell
-        cell.placeholder = FaceTextFieldType(rawValue: indexPath.row)?.placeholder()
-        
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("ImageCellIdentifier")!
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("TextFieldCellIdentifier") as! TextFiledViewCell
+            cell.placeholder = FaceTextFieldType(rawValue: indexPath.row)?.placeholder()
+            return cell
+        }
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 240.0 : 43.0
     }
     
     // MARK: UITextFieldDelegate

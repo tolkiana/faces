@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3by-PE-UXB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Faces-->
@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vli-2V-8eV">
-                                <rect key="frame" x="16" y="267" width="343" height="400"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCellIdentifier" id="d7m-mj-jbM" customClass="TextFiledViewCell" customModule="faces" customModuleProvider="target">
@@ -115,43 +115,48 @@
                                             <outlet property="textField" destination="CBJ-3D-9yx" id="6F5-Z8-ah7"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="225" id="vtc-gu-zbQ">
+                                        <rect key="frame" x="0.0" y="136" width="343" height="225"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtc-gu-zbQ" id="et9-iv-4te">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="224"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygu-IC-Tfp">
+                                                    <rect key="frame" x="82" y="9" width="179" height="179"/>
+                                                    <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ygu-IC-Tfp" secondAttribute="height" multiplier="1:1" id="UEr-cZ-bqU"/>
+                                                    </constraints>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-av-hWY">
+                                                    <rect key="frame" x="82" y="189" width="179" height="30"/>
+                                                    <state key="normal" title="Edit"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ygA-av-hWY" secondAttribute="trailing" constant="74" id="1h5-9r-ol2"/>
+                                                <constraint firstItem="ygA-av-hWY" firstAttribute="leading" secondItem="et9-iv-4te" secondAttribute="leadingMargin" constant="74" id="28a-gx-mFj"/>
+                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="top" secondItem="et9-iv-4te" secondAttribute="topMargin" constant="1" id="LhA-lt-Tzb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ygu-IC-Tfp" secondAttribute="trailing" constant="74" id="aje-NL-pkc"/>
+                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="leading" secondItem="et9-iv-4te" secondAttribute="leadingMargin" constant="74" id="lDi-lc-b6i"/>
+                                                <constraint firstItem="ygA-av-hWY" firstAttribute="top" secondItem="ygu-IC-Tfp" secondAttribute="bottom" constant="1" id="qaT-de-tNW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vky-TZ-aGK" id="QsY-dS-lMU"/>
                                     <outlet property="delegate" destination="vky-TZ-aGK" id="WMN-L7-RGJ"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-W3-cyn">
-                                <rect key="frame" x="76" y="84" width="223" height="233"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Ps-gua">
-                                        <rect key="frame" x="0.0" y="0.0" width="223" height="203"/>
-                                        <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchDragInside" id="AYW-b7-yah"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-YT-Mcl">
-                                        <rect key="frame" x="0.0" y="203" width="223" height="30"/>
-                                        <state key="normal" title="Edit"/>
-                                        <connections>
-                                            <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchDragInside" id="Efi-Nu-SI9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vli-2V-8eV" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" id="4Jk-KD-pI0"/>
-                            <constraint firstItem="Yqp-7i-57Z" firstAttribute="top" secondItem="vli-2V-8eV" secondAttribute="bottom" id="Gs2-uA-tWL"/>
-                            <constraint firstItem="vli-2V-8eV" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.6" id="M9s-nx-CYB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vli-2V-8eV" secondAttribute="trailing" id="Uks-7y-RwU"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" constant="20" id="Y6y-Q3-bfG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cey-W3-cyn" secondAttribute="trailing" constant="60" id="d8F-1J-XWH"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" constant="60" id="go7-pK-1Pd"/>
-                            <constraint firstItem="Cey-W3-cyn" firstAttribute="height" secondItem="vRX-9l-ZhH" secondAttribute="height" multiplier="0.35" id="kfd-fh-h6p"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" id="Kce-XD-Af9"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="bottom" secondItem="Yqp-7i-57Z" secondAttribute="top" id="URG-Yb-3az"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leadingMargin" id="fgG-kq-do6"/>
+                            <constraint firstItem="vli-2V-8eV" firstAttribute="trailing" secondItem="vRX-9l-ZhH" secondAttribute="trailingMargin" id="peU-8v-yrU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Face" id="N55-5F-0xh">
