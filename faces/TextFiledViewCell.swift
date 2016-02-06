@@ -12,13 +12,14 @@ class TextFiledViewCell: UITableViewCell {
     
     @IBOutlet private var textField: UITextField!
     
-    var placeholder : String? {
-        get {
-            return self.textField.placeholder
-        }
+    var type: FaceTextFieldType? {
         
-        set(newPlaceholder) {
-            self.textField.placeholder = newPlaceholder
+        willSet(incomingType) {
+            guard let placeHolder = incomingType?.placeholder() else {
+                return
+            }
+            self.textField.placeholder = placeHolder
         }
     }
+    
 }

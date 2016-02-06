@@ -83,7 +83,7 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func textFieldCell(tableView: UITableView, row: Int) -> TextFiledViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.dynamicType.TextFiledCellIdentifier) as! TextFiledViewCell
-        cell.placeholder = FaceTextFieldType(rawValue: row)?.placeholder()
+        cell.type = FaceTextFieldType(rawValue: row)
         return cell
     }
     
@@ -107,6 +107,7 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func textFieldDidBeginEditing(textField: UITextField) {
         self.activeTextField = textField
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
