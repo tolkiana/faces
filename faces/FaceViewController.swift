@@ -108,6 +108,19 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func textFieldDidBeginEditing(textField: UITextField) {
         self.activeTextField = textField
         
+        guard let cell = textField.superview?.superview as? TextFiledViewCell,
+            let textFieldType = cell.type else {
+            return
+        }
+        
+        switch textFieldType {
+        case .Emoji:
+            print("Show emoji View")
+        case .Contact:
+            print("Show Contancts")
+        default:
+            print("Do nothing")
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
