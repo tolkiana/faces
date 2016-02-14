@@ -109,7 +109,7 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         switch textFieldType {
         case .Emoji:
-            print("Show emoji View")
+            self.performSegueWithIdentifier(Constants.Storyboard.EmojiSegueIdentifier, sender: self)
         case .Contact:
             print("Show Contancts")
         default:
