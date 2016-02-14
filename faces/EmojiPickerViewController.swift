@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmojiPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
+class EmojiPickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet var pickerView: UIPickerView!
     
