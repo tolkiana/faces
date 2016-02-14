@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38104B091BDF129D0055E84A /* FaceViewController.swift */; };
+		38B7337D1C710DC4008F2843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7337C1C710DC4008F2843 /* Constants.swift */; };
 		38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */; };
 		38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */; };
 		38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */; };
@@ -124,6 +125,7 @@
 
 /* Begin PBXFileReference section */
 		38104B091BDF129D0055E84A /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		38B7337C1C710DC4008F2843 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38C8BBEF1BCC8EEA009B6D89 /* faces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FacesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -208,6 +210,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38B7337B1C710DA4008F2843 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				38B7337C1C710DC4008F2843 /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		38C8BBE61BCC8EEA009B6D89 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		38C8BBF11BCC8EEA009B6D89 /* faces */ = {
 			isa = PBXGroup;
 			children = (
+				38B7337B1C710DA4008F2843 /* Constants */,
 				4BF5E2311BF182DA00CCF95F /* models */,
 				4BF5E22E1BF1688700CCF95F /* faceCustomization */,
 				4BF5E22D1BF1685C00CCF95F /* facesList */,
@@ -620,6 +631,7 @@
 				4BF5E2351BF41E5C00CCF95F /* EmojiPickerViewController.swift in Sources */,
 				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
+				38B7337D1C710DC4008F2843 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

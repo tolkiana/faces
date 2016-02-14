@@ -182,6 +182,7 @@
                     <connections>
                         <outlet property="doneButton" destination="2wk-ar-Umi" id="tLV-p3-3I1"/>
                         <outlet property="tableView" destination="vli-2V-8eV" id="ZfD-Ch-FAo"/>
+                        <segue destination="lrV-8P-Sh5" kind="modal" identifier="EmojiSegueIdentifier" id="pxf-PL-byb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jm0-0u-hk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +192,6 @@
         <!--Emoji Picker View Controller-->
         <scene sceneID="aco-wx-GYp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rV0-su-xGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lrV-8P-Sh5" customClass="EmojiPickerViewController" customModule="faces" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qKr-Bt-xVQ"/>
@@ -234,8 +234,9 @@
                         <outlet property="pickerView" destination="oke-7V-cLh" id="JMK-MB-sn4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rV0-su-xGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219.5" y="1137.5"/>
+            <point key="canvasLocation" x="1219.5" y="1103.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Kt-ky-XKd">

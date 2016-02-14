@@ -22,12 +22,6 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var activeTextField: UITextField?
     private var originalContentInset: UIEdgeInsets?
 
-    // Constants
-    static let TextFiledCellHeight = CGFloat(43.0)
-    static let TextFiledCellIdentifier = "TextFieldCellIdentifier"
-    static let ImageCellHeight = CGFloat(240.0)
-    static let ImageCellIdentifier = "ImageCellIdentifier"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,14 +69,14 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         switch indexPath.section {
         case TableSection.Image.rawValue:
-            return tableView.dequeueReusableCellWithIdentifier(self.dynamicType.ImageCellIdentifier)!
+            return tableView.dequeueReusableCellWithIdentifier(Constants.Storyboard.ImageCellIdentifier)!
         default:
             return textFieldCell(tableView, row: indexPath.row)
         }
     }
     
     func textFieldCell(tableView: UITableView, row: Int) -> TextFiledViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(self.dynamicType.TextFiledCellIdentifier) as! TextFiledViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.Storyboard.TextFiledCellIdentifier) as! TextFiledViewCell
         cell.type = FaceTextFieldType(rawValue: row)
         return cell
     }
@@ -92,9 +86,9 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case TableSection.Image.rawValue:
-            return self.dynamicType.ImageCellHeight
+            return Constants.Storyboard.ImageCellHeight
         default:
-            return self.dynamicType.TextFiledCellHeight
+            return Constants.Storyboard.TextFiledCellHeight
         }
     }
     
