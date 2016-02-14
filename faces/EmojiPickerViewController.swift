@@ -34,4 +34,14 @@ class EmojiPickerViewController: UIViewController, UIPickerViewDataSource, UIPic
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 40.0
     }
+    
+    // MARK: IBActions
+    
+    @IBAction func done(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
