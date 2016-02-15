@@ -26,8 +26,8 @@ class EmojiPickerViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.EmojiCellIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.blueColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.EmojiCellIdentifier, forIndexPath: indexPath) as! EmojiViewCell
+        cell.emoji = emojies[indexPath.row]
         return cell
     }
     
