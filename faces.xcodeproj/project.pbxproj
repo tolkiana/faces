@@ -218,6 +218,20 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		38B7337E1C717045008F2843 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		38B7337F1C717055008F2843 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		38C8BBE61BCC8EEA009B6D89 = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				38B7337B1C710DA4008F2843 /* Constants */,
-				4BF5E2311BF182DA00CCF95F /* models */,
+				38B7337F1C717055008F2843 /* Cells */,
+				38B7337E1C717045008F2843 /* Controllers */,
+				4BF5E2311BF182DA00CCF95F /* Models */,
 				4BF5E22E1BF1688700CCF95F /* faceCustomization */,
 				4BF5E22D1BF1685C00CCF95F /* facesList */,
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
@@ -348,12 +364,12 @@
 			name = faceCustomization;
 			sourceTree = "<group>";
 		};
-		4BF5E2311BF182DA00CCF95F /* models */ = {
+		4BF5E2311BF182DA00CCF95F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4BF5E2321BF1834500CCF95F /* Face.swift */,
 			);
-			name = models;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

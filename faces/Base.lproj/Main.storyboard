@@ -201,47 +201,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="top" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-kl-mpH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FMX-1j-Oxh">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="334"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oV0-T9-d7Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="57"/>
-                                        <items>
-                                            <barButtonItem title="Cancel" id="b0e-iJ-Puz">
-                                                <connections>
-                                                    <action selector="cancel:" destination="lrV-8P-Sh5" id="V2Q-pI-Euo"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="DNh-8U-dMm"/>
-                                            <barButtonItem title="Done" id="QnT-bI-jvj">
-                                                <connections>
-                                                    <action selector="done:" destination="lrV-8P-Sh5" id="7aF-Iz-5PU"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oke-7V-cLh">
-                                        <rect key="frame" x="0.0" y="57" width="383" height="277"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-5e-8Yv">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="334"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Iec-L9-7R2">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCellIdentifier" id="Lzx-6j-Er5">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
                                         <connections>
-                                            <outlet property="dataSource" destination="lrV-8P-Sh5" id="GQj-D3-PON"/>
-                                            <outlet property="delegate" destination="lrV-8P-Sh5" id="Dgo-mK-ug1"/>
+                                            <outlet property="dataSource" destination="lrV-8P-Sh5" id="mbL-Tn-MSm"/>
+                                            <outlet property="delegate" destination="lrV-8P-Sh5" id="Z2H-1Q-Lt1"/>
                                         </connections>
-                                    </pickerView>
+                                    </collectionView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kpi-kl-mpH" firstAttribute="height" secondItem="4fe-jz-Eny" secondAttribute="height" multiplier="0.5" id="5y0-cT-crl"/>
-                            <constraint firstItem="kpi-kl-mpH" firstAttribute="leading" secondItem="4fe-jz-Eny" secondAttribute="leadingMargin" constant="-20" id="76X-mM-XY4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kpi-kl-mpH" secondAttribute="trailing" constant="-20" id="CaF-b5-tjC"/>
-                            <constraint firstItem="kpi-kl-mpH" firstAttribute="top" secondItem="4fe-jz-Eny" secondAttribute="topMargin" id="znE-5l-tCG"/>
+                            <constraint firstItem="FMX-1j-Oxh" firstAttribute="top" secondItem="4fe-jz-Eny" secondAttribute="topMargin" id="FCT-0t-fa4"/>
+                            <constraint firstItem="FMX-1j-Oxh" firstAttribute="height" secondItem="4fe-jz-Eny" secondAttribute="height" multiplier="0.5" id="Kf2-rs-4eg"/>
+                            <constraint firstItem="FMX-1j-Oxh" firstAttribute="leading" secondItem="4fe-jz-Eny" secondAttribute="leadingMargin" constant="-20" id="PbT-Qz-LDC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FMX-1j-Oxh" secondAttribute="trailing" constant="-20" id="fGk-5n-mcH"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="pickerView" destination="oke-7V-cLh" id="JMK-MB-sn4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rV0-su-xGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

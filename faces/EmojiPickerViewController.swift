@@ -8,31 +8,35 @@
 
 import UIKit
 
-class EmojiPickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class EmojiPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var pickerView: UIPickerView!
     
     var emojies: [String] = ["😀","😁","😃","😄","😊","😉","😍","😘","😙","😚","☺️",
         "😇","😋","😗","😛","😜","😝","😺","😻","😽"]
 
-    // MARK: UIPickerViewDataSoruce
+    // MARK: UICollectionViewDataSource
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return emojies.count
     }
     
-    // MARK: UIPickerViewDelegate
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return emojies[row]
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.EmojiCellIdentifier, forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.blueColor()
+        return cell
     }
     
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 40.0
+    // MARK: UICollectionViewDelegateFlowLayout
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(
+            width: collectionView.frame.width/Constants.Storyboard.EmojiCellSize,
+            height: collectionView.frame.width/Constants.Storyboard.EmojiCellSize)
     }
     
     // MARK: IBActions

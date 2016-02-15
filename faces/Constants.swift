@@ -15,7 +15,9 @@ struct Constants {
         static let EmojiSegueIdentifier = "EmojiSegueIdentifier"
         static let TextFiledCellIdentifier = "TextFieldCellIdentifier"
         static let ImageCellIdentifier = "ImageCellIdentifier"
+        static let EmojiCellIdentifier = "EmojiCellIdentifier"
         static let TextFiledCellHeight = CGFloat(43.0)
         static let ImageCellHeight = CGFloat(240.0)
+        static let EmojiCellSize = CGFloat(5.0)
     }
 }
