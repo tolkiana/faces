@@ -35,8 +35,8 @@ class EmojiPickerViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSize(
-            width: collectionView.frame.width/Constants.Storyboard.EmojiCellSize,
-            height: collectionView.frame.width/Constants.Storyboard.EmojiCellSize)
+            width: collectionView.frame.width/Constants.Storyboard.EmojiCellScaleFactor,
+            height: collectionView.frame.width/Constants.Storyboard.EmojiCellScaleFactor)
     }
     
     // MARK: IBActions
