@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38104B091BDF129D0055E84A /* FaceViewController.swift */; };
-		38B7337D1C710DC4008F2843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7337C1C710DC4008F2843 /* Constants.swift */; };
+		38B733821C717198008F2843 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733811C717198008F2843 /* Face.swift */; };
+		38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733831C71719F008F2843 /* EmojiPickerViewController.swift */; };
+		38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733841C71719F008F2843 /* FacesTableViewController.swift */; };
+		38B733881C71719F008F2843 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733851C71719F008F2843 /* FaceViewController.swift */; };
+		38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733891C7171A6008F2843 /* FaceTableViewCell.swift */; };
+		38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */; };
+		38B7338E1C7171AC008F2843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338D1C7171AC008F2843 /* Constants.swift */; };
+		38B733901C7171B5008F2843 /* FaceTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338F1C7171B5008F2843 /* FaceTextFieldType.swift */; };
 		38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */; };
-		38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */; };
 		38C8BBF81BCC8EEA009B6D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */; };
 		38C8BBFA1BCC8EEA009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */; };
 		38C8BBFD1BCC8EEA009B6D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */; };
@@ -23,16 +28,11 @@
 		38C8BC321BCC8EEB009B6D89 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC311BCC8EEB009B6D89 /* NotificationController.swift */; };
 		38C8BC341BCC8EEB009B6D89 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8BC331BCC8EEB009B6D89 /* GlanceController.swift */; };
 		38C8BC361BCC8EEB009B6D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8BC351BCC8EEB009B6D89 /* Assets.xcassets */; };
-		38D0768F1C2A44E2006298A5 /* TextFiledViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */; };
-		38D076911C2A51C5006298A5 /* FaceTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */; };
 		38F1943D1BCC8FED00FB2C35 /* facesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F1943C1BCC8FED00FB2C35 /* facesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F194441BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F1944F1BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
-		4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */; };
-		4BF5E2331BF1834500CCF95F /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2321BF1834500CCF95F /* Face.swift */; };
-		4BF5E2351BF41E5C00CCF95F /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5E2341BF41E5C00CCF95F /* EmojiPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,11 +124,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		38104B091BDF129D0055E84A /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
-		38B7337C1C710DC4008F2843 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38B733811C717198008F2843 /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		38B733831C71719F008F2843 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
+		38B733841C71719F008F2843 /* FacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacesTableViewController.swift; sourceTree = "<group>"; };
+		38B733851C71719F008F2843 /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		38B733891C7171A6008F2843 /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
+		38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFiledViewCell.swift; sourceTree = "<group>"; };
+		38B7338D1C7171AC008F2843 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38B7338F1C7171B5008F2843 /* FaceTextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTextFieldType.swift; sourceTree = "<group>"; };
 		38C8BBEF1BCC8EEA009B6D89 /* faces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FacesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		38C8BBF71BCC8EEA009B6D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C8BBFC1BCC8EEA009B6D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,17 +154,12 @@
 		38C8BC331BCC8EEB009B6D89 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		38C8BC351BCC8EEB009B6D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C8BC371BCC8EEB009B6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFiledViewCell.swift; sourceTree = "<group>"; };
-		38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTextFieldType.swift; sourceTree = "<group>"; };
 		38F1943A1BCC8FED00FB2C35 /* facesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = facesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F1943C1BCC8FED00FB2C35 /* facesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facesKit.h; sourceTree = "<group>"; };
 		38F1943E1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F194431BCC8FED00FB2C35 /* facesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F1944C1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
-		4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
-		4BF5E2321BF1834500CCF95F /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
-		4BF5E2341BF41E5C00CCF95F /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,23 +213,36 @@
 		38B7337B1C710DA4008F2843 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				38B7337C1C710DC4008F2843 /* Constants.swift */,
+				38B7338D1C7171AC008F2843 /* Constants.swift */,
 			);
-			name = Constants;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		38B7337E1C717045008F2843 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38B733831C71719F008F2843 /* EmojiPickerViewController.swift */,
+				38B733841C71719F008F2843 /* FacesTableViewController.swift */,
+				38B733851C71719F008F2843 /* FaceViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		38B7337F1C717055008F2843 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				38B733891C7171A6008F2843 /* FaceTableViewCell.swift */,
+				38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */,
 			);
-			name = Cells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		38B733801C71713E008F2843 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				38B7338F1C7171B5008F2843 /* FaceTextFieldType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		38C8BBE61BCC8EEA009B6D89 = {
@@ -263,12 +276,11 @@
 		38C8BBF11BCC8EEA009B6D89 /* faces */ = {
 			isa = PBXGroup;
 			children = (
+				38B733801C71713E008F2843 /* Enums */,
 				38B7337B1C710DA4008F2843 /* Constants */,
 				38B7337F1C717055008F2843 /* Cells */,
 				38B7337E1C717045008F2843 /* Controllers */,
 				4BF5E2311BF182DA00CCF95F /* Models */,
-				4BF5E22E1BF1688700CCF95F /* faceCustomization */,
-				4BF5E22D1BF1685C00CCF95F /* facesList */,
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
 				38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */,
 				38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */,
@@ -344,32 +356,12 @@
 			path = facesKitTests;
 			sourceTree = "<group>";
 		};
-		4BF5E22D1BF1685C00CCF95F /* facesList */ = {
-			isa = PBXGroup;
-			children = (
-				38C8BBF41BCC8EEA009B6D89 /* FacesTableViewController.swift */,
-				4BF5E22F1BF17D7200CCF95F /* FaceTableViewCell.swift */,
-			);
-			name = facesList;
-			sourceTree = "<group>";
-		};
-		4BF5E22E1BF1688700CCF95F /* faceCustomization */ = {
-			isa = PBXGroup;
-			children = (
-				38104B091BDF129D0055E84A /* FaceViewController.swift */,
-				38D0768E1C2A44E2006298A5 /* TextFiledViewCell.swift */,
-				4BF5E2341BF41E5C00CCF95F /* EmojiPickerViewController.swift */,
-				38D076901C2A51C5006298A5 /* FaceTextFieldType.swift */,
-			);
-			name = faceCustomization;
-			sourceTree = "<group>";
-		};
 		4BF5E2311BF182DA00CCF95F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4BF5E2321BF1834500CCF95F /* Face.swift */,
+				38B733811C717198008F2843 /* Face.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,15 +631,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF5E2301BF17D7200CCF95F /* FaceTableViewCell.swift in Sources */,
-				38104B0A1BDF129D0055E84A /* FaceViewController.swift in Sources */,
-				38D0768F1C2A44E2006298A5 /* TextFiledViewCell.swift in Sources */,
-				4BF5E2331BF1834500CCF95F /* Face.swift in Sources */,
-				38D076911C2A51C5006298A5 /* FaceTextFieldType.swift in Sources */,
-				4BF5E2351BF41E5C00CCF95F /* EmojiPickerViewController.swift in Sources */,
-				38C8BBF51BCC8EEA009B6D89 /* FacesTableViewController.swift in Sources */,
+				38B733901C7171B5008F2843 /* FaceTextFieldType.swift in Sources */,
+				38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */,
+				38B733821C717198008F2843 /* Face.swift in Sources */,
+				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
+				38B733881C71719F008F2843 /* FaceViewController.swift in Sources */,
+				38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */,
+				38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
-				38B7337D1C710DC4008F2843 /* Constants.swift in Sources */,
+				38B7338E1C7171AC008F2843 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
