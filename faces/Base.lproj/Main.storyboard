@@ -116,25 +116,26 @@
                                             <outlet property="textField" destination="CBJ-3D-9yx" id="6F5-Z8-ah7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="225" id="vtc-gu-zbQ">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="225"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="260" id="vtc-gu-zbQ">
+                                        <rect key="frame" x="0.0" y="136" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtc-gu-zbQ" id="et9-iv-4te">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygu-IC-Tfp">
-                                                    <rect key="frame" x="82" y="9" width="211" height="211"/>
+                                                    <rect key="frame" x="83" y="9" width="210" height="210"/>
                                                     <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ygu-IC-Tfp" secondAttribute="height" multiplier="1:1" id="UEr-cZ-bqU"/>
+                                                        <constraint firstAttribute="width" constant="210" id="DRx-gz-1es"/>
+                                                        <constraint firstAttribute="width" secondItem="ygu-IC-Tfp" secondAttribute="height" multiplier="1:1" id="Z3I-Md-lcn"/>
                                                     </constraints>
                                                     <connections>
                                                         <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="U9h-6w-rzv"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-av-hWY">
-                                                    <rect key="frame" x="82" y="221" width="211" height="30"/>
+                                                    <rect key="frame" x="173" y="220" width="30" height="30"/>
                                                     <state key="normal" title="Edit"/>
                                                     <connections>
                                                         <action selector="selectFace:" destination="vky-TZ-aGK" eventType="touchUpInside" id="jnT-ts-4aS"/>
@@ -142,12 +143,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ygA-av-hWY" secondAttribute="trailing" constant="74" id="1h5-9r-ol2"/>
-                                                <constraint firstItem="ygA-av-hWY" firstAttribute="leading" secondItem="et9-iv-4te" secondAttribute="leadingMargin" constant="74" id="28a-gx-mFj"/>
-                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="top" secondItem="et9-iv-4te" secondAttribute="topMargin" constant="1" id="LhA-lt-Tzb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ygu-IC-Tfp" secondAttribute="trailing" constant="74" id="aje-NL-pkc"/>
-                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="leading" secondItem="et9-iv-4te" secondAttribute="leadingMargin" constant="74" id="lDi-lc-b6i"/>
-                                                <constraint firstItem="ygA-av-hWY" firstAttribute="top" secondItem="ygu-IC-Tfp" secondAttribute="bottom" constant="1" id="qaT-de-tNW"/>
+                                                <constraint firstItem="ygA-av-hWY" firstAttribute="centerX" secondItem="et9-iv-4te" secondAttribute="centerX" id="7Zd-uh-DeW"/>
+                                                <constraint firstItem="ygA-av-hWY" firstAttribute="top" secondItem="ygu-IC-Tfp" secondAttribute="bottom" constant="1" id="BCz-NB-4TF"/>
+                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="top" secondItem="et9-iv-4te" secondAttribute="topMargin" constant="1" id="Jmq-In-vQl"/>
+                                                <constraint firstItem="ygu-IC-Tfp" firstAttribute="centerX" secondItem="et9-iv-4te" secondAttribute="centerX" id="sOg-os-BkD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
