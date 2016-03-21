@@ -17,6 +17,8 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Oulets
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var emojiView: UIView!
+    @IBOutlet var emojiVisibleHeight: NSLayoutConstraint!
 
     // Variables
     private var activeTextField: UITextField?
@@ -110,7 +112,7 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch textFieldType {
         case .Emoji:
             textField.resignFirstResponder()
-            self.performSegueWithIdentifier(Constants.Storyboard.EmojiSegueIdentifier, sender: self)
+            slideEmojiViewUp()
         case .Contact:
             print("Show Contancts")
         default:
@@ -120,6 +122,12 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func textFieldDidEndEditing(textField: UITextField) {
         self.activeTextField = textField
+    }
+    
+    func slideEmojiViewUp() {
+        UIView.animateWithDuration(2.0) { () -> Void in
+            self.emojiVisibleHeight.constant = 280
+        }
     }
     
     // MARK: Keyboard notifications

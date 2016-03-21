@@ -90,7 +90,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCellIdentifier" id="d7m-mj-jbM" customClass="TextFiledViewCell" customModule="faces" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7m-mj-jbM" id="DId-wj-fg0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -117,7 +117,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="260" id="vtc-gu-zbQ">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="260"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtc-gu-zbQ" id="et9-iv-4te">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
@@ -156,13 +156,23 @@
                                     <outlet property="delegate" destination="vky-TZ-aGK" id="WMN-L7-RGJ"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-Rf-LgQ">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" red="0.64314770190000004" green="0.78754150199999995" blue="0.91913448949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="gdY-2o-kxA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="N0e-Rf-LgQ" secondAttribute="trailing" id="4lc-Pd-lJM"/>
                             <constraint firstAttribute="trailing" secondItem="vli-2V-8eV" secondAttribute="trailing" id="6IZ-MY-cqc"/>
                             <constraint firstItem="vli-2V-8eV" firstAttribute="top" secondItem="XCg-Sn-B7D" secondAttribute="bottom" id="Kce-XD-Af9"/>
                             <constraint firstItem="vli-2V-8eV" firstAttribute="bottom" secondItem="Yqp-7i-57Z" secondAttribute="top" id="URG-Yb-3az"/>
                             <constraint firstItem="vli-2V-8eV" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leading" id="WWR-q1-uTj"/>
+                            <constraint firstItem="Yqp-7i-57Z" firstAttribute="top" secondItem="N0e-Rf-LgQ" secondAttribute="bottom" id="gHO-TP-0Hc"/>
+                            <constraint firstItem="N0e-Rf-LgQ" firstAttribute="leading" secondItem="vRX-9l-ZhH" secondAttribute="leading" id="l00-d8-Px2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Face" id="N55-5F-0xh">
@@ -180,6 +190,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="doneButton" destination="2wk-ar-Umi" id="tLV-p3-3I1"/>
+                        <outlet property="emojiView" destination="N0e-Rf-LgQ" id="qut-lj-LcN"/>
+                        <outlet property="emojiVisibleHeight" destination="gdY-2o-kxA" id="dZf-PY-t5R"/>
                         <outlet property="tableView" destination="vli-2V-8eV" id="ZfD-Ch-FAo"/>
                         <segue destination="lrV-8P-Sh5" kind="modal" identifier="EmojiSegueIdentifier" id="pxf-PL-byb"/>
                     </connections>

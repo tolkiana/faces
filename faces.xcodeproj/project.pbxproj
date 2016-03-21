@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384FBB481C9F8F5E001ACE9B /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FBB471C9F8F5E001ACE9B /* FaceViewController.swift */; };
 		38B733821C717198008F2843 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733811C717198008F2843 /* Face.swift */; };
 		38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733831C71719F008F2843 /* EmojiPickerViewController.swift */; };
 		38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733841C71719F008F2843 /* FacesTableViewController.swift */; };
-		38B733881C71719F008F2843 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733851C71719F008F2843 /* FaceViewController.swift */; };
 		38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733891C7171A6008F2843 /* FaceTableViewCell.swift */; };
 		38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */; };
 		38B7338E1C7171AC008F2843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338D1C7171AC008F2843 /* Constants.swift */; };
@@ -125,10 +125,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		384FBB471C9F8F5E001ACE9B /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		38B733811C717198008F2843 /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		38B733831C71719F008F2843 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 		38B733841C71719F008F2843 /* FacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacesTableViewController.swift; sourceTree = "<group>"; };
-		38B733851C71719F008F2843 /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		38B733891C7171A6008F2843 /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
 		38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFiledViewCell.swift; sourceTree = "<group>"; };
 		38B7338D1C7171AC008F2843 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -212,6 +212,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384FBB461C9F8F43001ACE9B /* FaceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				384FBB471C9F8F5E001ACE9B /* FaceViewController.swift */,
+			);
+			path = FaceViewController;
+			sourceTree = "<group>";
+		};
 		38B7337B1C710DA4008F2843 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,9 +231,9 @@
 		38B7337E1C717045008F2843 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				384FBB461C9F8F43001ACE9B /* FaceViewController */,
 				38B733831C71719F008F2843 /* EmojiPickerViewController.swift */,
 				38B733841C71719F008F2843 /* FacesTableViewController.swift */,
-				38B733851C71719F008F2843 /* FaceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -638,10 +646,10 @@
 				38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */,
 				38B733821C717198008F2843 /* Face.swift in Sources */,
 				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
-				38B733881C71719F008F2843 /* FaceViewController.swift in Sources */,
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
 				38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */,
 				38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */,
+				384FBB481C9F8F5E001ACE9B /* FaceViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
 				38B7338E1C7171AC008F2843 /* Constants.swift in Sources */,
 			);
