@@ -17,7 +17,6 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
     // Oulets
     @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var emojiView: UIView!
     @IBOutlet var emojiVisibleHeight: NSLayoutConstraint!
 
     // Variables
