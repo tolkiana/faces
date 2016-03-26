@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38172F7B1CA62EF60087BDC6 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38172F7A1CA62EF60087BDC6 /* EmojiPickerViewController.swift */; };
 		384FBB481C9F8F5E001ACE9B /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FBB471C9F8F5E001ACE9B /* FaceViewController.swift */; };
 		384FBB4A1C9F8F97001ACE9B /* FaceViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FBB491C9F8F97001ACE9B /* FaceViewDelegate.swift */; };
 		384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FBB4B1C9F8FB4001ACE9B /* FaceViewDataSource.swift */; };
 		38B733821C717198008F2843 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733811C717198008F2843 /* Face.swift */; };
-		38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733831C71719F008F2843 /* EmojiPickerViewController.swift */; };
 		38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733841C71719F008F2843 /* FacesTableViewController.swift */; };
 		38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B733891C7171A6008F2843 /* FaceTableViewCell.swift */; };
 		38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */; };
@@ -127,11 +127,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38172F7A1CA62EF60087BDC6 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 		384FBB471C9F8F5E001ACE9B /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		384FBB491C9F8F97001ACE9B /* FaceViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewDelegate.swift; sourceTree = "<group>"; };
 		384FBB4B1C9F8FB4001ACE9B /* FaceViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewDataSource.swift; sourceTree = "<group>"; };
 		38B733811C717198008F2843 /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
-		38B733831C71719F008F2843 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 		38B733841C71719F008F2843 /* FacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacesTableViewController.swift; sourceTree = "<group>"; };
 		38B733891C7171A6008F2843 /* FaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTableViewCell.swift; sourceTree = "<group>"; };
 		38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFiledViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +216,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38172F791CA62EE10087BDC6 /* EmojiPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				38172F7A1CA62EF60087BDC6 /* EmojiPickerViewController.swift */,
+			);
+			path = EmojiPickerViewController;
+			sourceTree = "<group>";
+		};
 		384FBB461C9F8F43001ACE9B /* FaceViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,8 +245,8 @@
 		38B7337E1C717045008F2843 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38172F791CA62EE10087BDC6 /* EmojiPickerViewController */,
 				384FBB461C9F8F43001ACE9B /* FaceViewController */,
-				38B733831C71719F008F2843 /* EmojiPickerViewController.swift */,
 				38B733841C71719F008F2843 /* FacesTableViewController.swift */,
 			);
 			path = Controllers;
@@ -649,9 +657,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B733901C7171B5008F2843 /* FaceTextFieldType.swift in Sources */,
-				38B733861C71719F008F2843 /* EmojiPickerViewController.swift in Sources */,
 				38B733821C717198008F2843 /* Face.swift in Sources */,
 				384FBB4A1C9F8F97001ACE9B /* FaceViewDelegate.swift in Sources */,
+				38172F7B1CA62EF60087BDC6 /* EmojiPickerViewController.swift in Sources */,
 				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
 				384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */,
