@@ -12,8 +12,8 @@ class EmojiPickerViewController: UIViewController, UICollectionViewDataSource, U
 
     @IBOutlet var pickerView: UIPickerView!
     
-    var emojies: [String] = ["😀","😁","😃","😄","😊","😉","😍","😘","😙","😚","☺️",
-        "😇","😋","😗","😛","😜","😝","😺","😻","😽"]
+    var emojies: [String] = ["🙂","🙃","😀","😁","😃","😄","😊","😉","😍","😘","😙","😚","☺️",
+        "😇","😋","😗","😛","😜","😝","😺","😸","😻","😽","❤️"]
 
     // MARK: UICollectionViewDataSource
     

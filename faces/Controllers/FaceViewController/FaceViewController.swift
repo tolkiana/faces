@@ -87,7 +87,7 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
     
     func slideEmojiViewUp() {
         UIView.animateWithDuration(2.0) { () -> Void in
-            self.emojiVisibleHeight.constant = 280
+            self.emojiVisibleHeight.constant = 250
         }
     }
     
