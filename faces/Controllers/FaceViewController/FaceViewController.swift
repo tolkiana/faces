@@ -12,7 +12,7 @@ enum TableSection: Int  {
     case Image, Info
 }
 
-class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class FaceViewController: UIViewController, UITextFieldDelegate {
 
     // Oulets
     @IBOutlet var doneButton: UIBarButtonItem!
@@ -23,9 +23,13 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Variables
     private var activeTextField: UITextField?
     private var originalContentInset: UIEdgeInsets?
+    private var dataSource = FaceViewDataSource()
+    private var delegate = FaceViewDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self.dataSource
+        self.tableView.delegate = self.delegate
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: Selector("keyboardWillShow:"),
@@ -50,48 +54,6 @@ class FaceViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func done(sender: UIButton) {
     
-    }
-    
-    // MARK: UITableViewDataSource
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case TableSection.Image.rawValue:
-            return 1
-        default:
-            return 3
-        }
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        switch indexPath.section {
-        case TableSection.Image.rawValue:
-            return tableView.dequeueReusableCellWithIdentifier(Constants.Storyboard.ImageCellIdentifier)!
-        default:
-            return textFieldCell(tableView, row: indexPath.row)
-        }
-    }
-    
-    func textFieldCell(tableView: UITableView, row: Int) -> TextFiledViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.Storyboard.TextFiledCellIdentifier) as! TextFiledViewCell
-        cell.type = FaceTextFieldType(rawValue: row)
-        return cell
-    }
-    
-    // MARK: UITableViewDelegate
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.section {
-        case TableSection.Image.rawValue:
-            return Constants.Storyboard.ImageCellHeight
-        default:
-            return Constants.Storyboard.TextFiledCellHeight
-        }
     }
     
     // MARK: UITextFieldDelegate

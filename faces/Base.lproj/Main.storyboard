@@ -151,10 +151,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="vky-TZ-aGK" id="QsY-dS-lMU"/>
-                                    <outlet property="delegate" destination="vky-TZ-aGK" id="WMN-L7-RGJ"/>
-                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-Rf-LgQ">
                                 <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
