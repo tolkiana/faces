@@ -37,15 +37,5 @@ class EmojiPickerViewController: UIViewController, UICollectionViewDataSource, U
         return CGSize(
             width: collectionView.frame.width/Constants.Storyboard.EmojiCellScaleFactor,
             height: collectionView.frame.width/Constants.Storyboard.EmojiCellScaleFactor)
-    }
-    
-    // MARK: IBActions
-    
-    @IBAction func done(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func cancel(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+    }    
 }
