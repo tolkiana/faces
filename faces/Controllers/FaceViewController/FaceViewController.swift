@@ -81,12 +81,6 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
         self.activeTextField = textField
     }
     
-    func slideEmojiViewUp() {
-        UIView.animateWithDuration(2.0) { () -> Void in
-            self.emojiVisibleHeight.constant = 250
-        }
-    }
-    
     // MARK: Keyboard notifications
     
     func keyboardWillShow(notification: NSNotification) {
