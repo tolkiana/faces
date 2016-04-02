@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class FaceViewDataSource: NSObject, UITableViewDataSource {
-    
+extension FaceViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }

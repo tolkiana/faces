@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FaceViewDelegate: NSObject, UITableViewDelegate {
- 
+extension FaceViewController: UITableViewDelegate {
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case TableSection.Image.rawValue:

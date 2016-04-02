@@ -22,13 +22,9 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
     // Variables
     var activeTextField: UITextField?
     private var originalContentInset: UIEdgeInsets?
-    private var dataSource = FaceViewDataSource()
-    private var delegate = FaceViewDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.dataSource = self.dataSource
-        self.tableView.delegate = self.delegate
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: Selector("keyboardWillShow:"),
