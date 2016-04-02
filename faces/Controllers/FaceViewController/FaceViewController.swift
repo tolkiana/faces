@@ -20,7 +20,7 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emojiVisibleHeight: NSLayoutConstraint!
 
     // Variables
-    private var activeTextField: UITextField?
+    var activeTextField: UITextField?
     private var originalContentInset: UIEdgeInsets?
     private var dataSource = FaceViewDataSource()
     private var delegate = FaceViewDelegate()
@@ -73,7 +73,7 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
         switch textFieldType {
         case .Emoji:
             textField.resignFirstResponder()
-            slideEmojiViewUp()
+            print("Show Emoji picker")
         case .Contact:
             print("Show Contancts")
         default:
