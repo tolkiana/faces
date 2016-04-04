@@ -257,13 +257,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		38B7337F1C717055008F2843 /* Cells */ = {
+		38B7337F1C717055008F2843 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				38B733891C7171A6008F2843 /* FaceTableViewCell.swift */,
 				38B7338A1C7171A6008F2843 /* TextFiledViewCell.swift */,
 				38B733911C717299008F2843 /* EmojiViewCell.swift */,
 			);
+			name = Views;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -306,15 +307,14 @@
 		38C8BBF11BCC8EEA009B6D89 /* faces */ = {
 			isa = PBXGroup;
 			children = (
+				4B7BC1801CB2088400AAE785 /* Storyboards */,
 				38B733801C71713E008F2843 /* Enums */,
 				38B7337B1C710DA4008F2843 /* Constants */,
-				38B7337F1C717055008F2843 /* Cells */,
+				38B7337F1C717055008F2843 /* Views */,
 				38B7337E1C717045008F2843 /* Controllers */,
 				4BF5E2311BF182DA00CCF95F /* Models */,
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
-				38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */,
 				38C8BBF91BCC8EEA009B6D89 /* Assets.xcassets */,
-				38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */,
 				38C8BBFE1BCC8EEA009B6D89 /* Info.plist */,
 			);
 			path = faces;
@@ -400,6 +400,15 @@
 				4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */,
 			);
 			name = FaceDetailViewController;
+			sourceTree = "<group>";
+		};
+		4B7BC1801CB2088400AAE785 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				38C8BBF61BCC8EEA009B6D89 /* Main.storyboard */,
+				38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		4BF5E2311BF182DA00CCF95F /* Models */ = {
