@@ -24,7 +24,7 @@ class FaceDetailViewController: UIViewController {
         guard let aface = face else {
             return
         }
-        
+        title = aface.alias
         contactName.text = aface.contact.firstName + " " + aface.contact.lastName
         emoji.text = aface.emoticon
         faceImageView.image = UIImage(named: aface.imageName)
