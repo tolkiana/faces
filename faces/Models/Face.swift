@@ -9,7 +9,7 @@
 import Foundation
 
 struct Face {
-    var title: String
+    var alias: String
     var emoticon: String
     var imageName: String
     var lastEmojiDate: NSDate
