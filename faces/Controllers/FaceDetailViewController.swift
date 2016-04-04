@@ -16,22 +16,13 @@ class FaceDetailViewController: UIViewController {
     @IBOutlet var emoji: UILabel!
     @IBOutlet var faceImageView: UIImageView!
     
-    var face: Face?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let aface = face else {
-            return
+    var viewModel: FaceViewModel? {
+        didSet {
+            lastEmojiDate.text = viewModel?.date
+            contactName.text = viewModel?.contactName
+            emoji.text = viewModel?.emoji
+            faceImageView.image = viewModel?.image
+            title = viewModel?.alias
         }
-        title = aface.alias
-        contactName.text = aface.contact.firstName + " " + aface.contact.lastName
-        emoji.text = aface.emoticon
-        faceImageView.image = UIImage(named: aface.imageName)
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        
-        lastEmojiDate.text = dateFormatter.stringFromDate(aface.lastEmojiDate)
     }
 }

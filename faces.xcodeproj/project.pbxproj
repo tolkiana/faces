@@ -38,6 +38,9 @@
 		4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */; };
 		4B7BC17F1CB2071800AAE785 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17E1CB2071800AAE785 /* Contact.swift */; };
 		4B7BC1831CB21ABB00AAE785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7BC1811CB21ABB00AAE785 /* Main.storyboard */; };
+		4B7BC1861CB220F800AAE785 /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC1851CB220F800AAE785 /* FaceViewModel.swift */; };
+		4B7BC1881CB2242000AAE785 /* FaceViewModelFromFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC1871CB2242000AAE785 /* FaceViewModelFromFace.swift */; };
+		4B7BC18A1CB2244800AAE785 /* FaceViewModelFromContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC1891CB2244800AAE785 /* FaceViewModelFromContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +173,9 @@
 		4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetailViewController.swift; sourceTree = "<group>"; };
 		4B7BC17E1CB2071800AAE785 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		4B7BC1821CB21ABB00AAE785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B7BC1851CB220F800AAE785 /* FaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
+		4B7BC1871CB2242000AAE785 /* FaceViewModelFromFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewModelFromFace.swift; sourceTree = "<group>"; };
+		4B7BC1891CB2244800AAE785 /* FaceViewModelFromContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewModelFromContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +316,7 @@
 				4B7BC1801CB2088400AAE785 /* Storyboards */,
 				38B733801C71713E008F2843 /* Enums */,
 				38B7337B1C710DA4008F2843 /* Constants */,
+				4B7BC1841CB2205100AAE785 /* ModelViews */,
 				38B7337F1C717055008F2843 /* Views */,
 				38B7337E1C717045008F2843 /* Controllers */,
 				4BF5E2311BF182DA00CCF95F /* Models */,
@@ -409,6 +416,16 @@
 				38C8BBFB1BCC8EEA009B6D89 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4B7BC1841CB2205100AAE785 /* ModelViews */ = {
+			isa = PBXGroup;
+			children = (
+				4B7BC1851CB220F800AAE785 /* FaceViewModel.swift */,
+				4B7BC1871CB2242000AAE785 /* FaceViewModelFromFace.swift */,
+				4B7BC1891CB2244800AAE785 /* FaceViewModelFromContact.swift */,
+			);
+			name = ModelViews;
 			sourceTree = "<group>";
 		};
 		4BF5E2311BF182DA00CCF95F /* Models */ = {
@@ -691,14 +708,17 @@
 				38B733821C717198008F2843 /* Face.swift in Sources */,
 				384FBB4A1C9F8F97001ACE9B /* FaceViewDelegate.swift in Sources */,
 				38172F7B1CA62EF60087BDC6 /* EmojiPickerViewController.swift in Sources */,
+				4B7BC1881CB2242000AAE785 /* FaceViewModelFromFace.swift in Sources */,
 				4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */,
 				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
 				4B7BC17F1CB2071800AAE785 /* Contact.swift in Sources */,
+				4B7BC1861CB220F800AAE785 /* FaceViewModel.swift in Sources */,
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
 				384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */,
 				38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */,
 				38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */,
 				384FBB481C9F8F5E001ACE9B /* FaceViewController.swift in Sources */,
+				4B7BC18A1CB2244800AAE785 /* FaceViewModelFromContact.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
 				38B7338E1C7171AC008F2843 /* Constants.swift in Sources */,
 			);

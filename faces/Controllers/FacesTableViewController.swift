@@ -41,12 +41,12 @@ class FacesTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier else {
+        guard let identifier = segue.identifier, let selectedFace = selectedFace else {
             return
         }
         if (identifier == Constants.Storyboard.FaceDetailIdentifier) {
             let detail: FaceDetailViewController = segue.destinationViewController as! FaceDetailViewController
-            detail.face = selectedFace
+            detail.viewModel = FaceViewModelFromFace(face: selectedFace)
         }
     }
 }

@@ -21,4 +21,8 @@ struct Constants {
         static let ImageCellHeight = CGFloat(245.0)
         static let EmojiCellScaleFactor = CGFloat(8.0)
     }
+    
+    struct Images {
+        static let FacePlaceHolder = "FacePlaceHolders"
+    }
 }
