@@ -13,6 +13,7 @@ struct Constants {
     
     struct Storyboard {
         static let EmojiSegueIdentifier = "EmojiSegueIdentifier"
+        static let FaceDetailIdentifier = "FaceDetailIdentifier"
         static let TextFiledCellIdentifier = "TextFieldCellIdentifier"
         static let ImageCellIdentifier = "ImageCellIdentifier"
         static let EmojiCellIdentifier = "EmojiCellIdentifier"

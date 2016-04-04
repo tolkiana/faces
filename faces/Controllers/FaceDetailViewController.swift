@@ -15,4 +15,6 @@ class FaceDetailViewController: UIViewController {
     @IBOutlet var contactName: UILabel!
     @IBOutlet var emoji: UILabel!
     @IBOutlet var faceImageView: UIImageView!
+    
+    var face: Face?
 }

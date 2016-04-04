@@ -147,7 +147,7 @@
                                         <connections>
                                             <outlet property="emoticonLabel" destination="op7-k0-kAQ" id="6yI-Ys-DBc"/>
                                             <outlet property="faceTitleLabel" destination="W5I-8x-hpC" id="hyi-oL-yEQ"/>
-                                            <segue destination="XCc-jo-NS3" kind="push" id="XfA-hy-O08"/>
+                                            <segue destination="XCc-jo-NS3" kind="push" identifier="FaceDetailIdentifier" id="XfA-hy-O08"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
