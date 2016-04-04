@@ -37,6 +37,7 @@ class FacesTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedFace = faces[indexPath.row]
+        self.performSegueWithIdentifier(Constants.Storyboard.FaceDetailIdentifier, sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

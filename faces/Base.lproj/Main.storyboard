@@ -97,12 +97,12 @@
                         <outlet property="contactName" destination="7vY-uB-CaY" id="wUE-x8-SZD"/>
                         <outlet property="emoji" destination="d0C-YQ-1zn" id="sBJ-ny-WUI"/>
                         <outlet property="faceImageView" destination="zcU-FN-aKr" id="CNp-sK-tke"/>
-                        <outlet property="lastEmoji" destination="raF-lC-sT2" id="ecd-Lq-17A"/>
+                        <outlet property="lastEmojiDate" destination="raF-lC-sT2" id="O3l-Em-bMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beM-fs-yMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406.5" y="1091.5"/>
+            <point key="canvasLocation" x="406.5" y="1031.5"/>
         </scene>
         <!--Faces-->
         <scene sceneID="tne-QT-ifu">
@@ -147,12 +147,12 @@
                                         <connections>
                                             <outlet property="emoticonLabel" destination="op7-k0-kAQ" id="6yI-Ys-DBc"/>
                                             <outlet property="faceTitleLabel" destination="W5I-8x-hpC" id="hyi-oL-yEQ"/>
-                                            <segue destination="XCc-jo-NS3" kind="push" identifier="FaceDetailIdentifier" id="XfA-hy-O08"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="U5P-Sp-u3q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5lf-8A-VM8"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -172,6 +172,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="XCc-jo-NS3" kind="push" identifier="FaceDetailIdentifier" id="ivo-Oa-6o8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
