@@ -245,9 +245,10 @@
 		38B7337E1C717045008F2843 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B7BC17B1CB2020900AAE785 /* New Group */,
+				4B7BC17A1CB1F9FE00AAE785 /* FaceTableViewController */,
 				38172F791CA62EE10087BDC6 /* EmojiPickerViewController */,
 				384FBB461C9F8F43001ACE9B /* FaceViewController */,
-				38B733841C71719F008F2843 /* FacesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +380,21 @@
 				38F1944C1BCC8FED00FB2C35 /* Info.plist */,
 			);
 			path = facesKitTests;
+			sourceTree = "<group>";
+		};
+		4B7BC17A1CB1F9FE00AAE785 /* FaceTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				38B733841C71719F008F2843 /* FacesTableViewController.swift */,
+			);
+			name = FaceTableViewController;
+			sourceTree = "<group>";
+		};
+		4B7BC17B1CB2020900AAE785 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		4BF5E2311BF182DA00CCF95F /* Models */ = {

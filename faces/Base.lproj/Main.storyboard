@@ -6,6 +6,98 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="2nt-UZ-Bl2">
+            <objects>
+                <viewController id="XCc-jo-NS3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uvP-rS-5KH"/>
+                        <viewControllerLayoutGuide type="bottom" id="PAU-dO-cXd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="deV-zG-CG0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-FN-aKr">
+                                <rect key="frame" x="88" y="104" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="22i-Rf-Rn8"/>
+                                    <constraint firstAttribute="width" secondItem="zcU-FN-aKr" secondAttribute="height" multiplier="1:1" id="ulf-7P-AXL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjv-J6-KIG">
+                                <rect key="frame" x="149" y="567" width="77" height="30"/>
+                                <state key="normal" title="Send Emoji"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Gx-Nv-gIm">
+                                <rect key="frame" x="65" y="359" width="246" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-KA-ene">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="130"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXM-1H-Ry5">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcI-cT-XSE">
+                                                <rect key="frame" x="0.0" y="53" width="121" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last sent emoji:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-Nz-qoe">
+                                                <rect key="frame" x="0.0" y="106" width="121" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xGa-0S-62Q">
+                                        <rect key="frame" x="140" y="0.0" width="105" height="130"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0C-YQ-1zn">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juana Sedan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vY-uB-CaY">
+                                                <rect key="frame" x="0.0" y="59" width="105" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 13 19:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raF-lC-sT2">
+                                                <rect key="frame" x="0.0" y="109" width="105" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zcU-FN-aKr" firstAttribute="centerX" secondItem="deV-zG-CG0" secondAttribute="centerX" id="B2k-Vy-GZf"/>
+                            <constraint firstItem="8Gx-Nv-gIm" firstAttribute="top" secondItem="zcU-FN-aKr" secondAttribute="bottom" constant="55" id="QCf-yy-iTg"/>
+                            <constraint firstItem="PAU-dO-cXd" firstAttribute="top" secondItem="qjv-J6-KIG" secondAttribute="bottom" constant="70" id="Thq-cj-j6Z"/>
+                            <constraint firstItem="8Gx-Nv-gIm" firstAttribute="centerX" secondItem="deV-zG-CG0" secondAttribute="centerX" id="guG-Qg-tt0"/>
+                            <constraint firstItem="qjv-J6-KIG" firstAttribute="centerX" secondItem="deV-zG-CG0" secondAttribute="centerX" id="qUZ-Eq-Ccd"/>
+                            <constraint firstItem="zcU-FN-aKr" firstAttribute="top" secondItem="uvP-rS-5KH" secondAttribute="bottom" constant="40" id="rTn-d4-eZF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LOb-vd-3Um"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beM-fs-yMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406.5" y="1091.5"/>
+        </scene>
         <!--Faces-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,11 +114,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FaceCellIdentifier" rowHeight="73" id="Ziq-36-c95" customClass="FaceTableViewCell" customModule="faces" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FaceCellIdentifier" rowHeight="73" id="Ziq-36-c95" customClass="FaceTableViewCell" customModule="faces" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ziq-36-c95" id="4Dg-vu-uJL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lA-Qw-132">
@@ -49,6 +141,7 @@
                                         <connections>
                                             <outlet property="emoticonLabel" destination="op7-k0-kAQ" id="6yI-Ys-DBc"/>
                                             <outlet property="faceTitleLabel" destination="W5I-8x-hpC" id="hyi-oL-yEQ"/>
+                                            <segue destination="XCc-jo-NS3" kind="push" id="XfA-hy-O08"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
