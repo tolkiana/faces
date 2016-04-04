@@ -12,4 +12,6 @@ struct Face {
     var title: String
     var emoticon: String
     var imageName: String
+    var lastEmojiDate: NSDate
+    var contact: Contact
 }
