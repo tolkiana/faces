@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Face Detail View Controller-->
         <scene sceneID="2nt-UZ-Bl2">
             <objects>
-                <viewController id="XCc-jo-NS3" sceneMemberID="viewController">
+                <viewController id="XCc-jo-NS3" customClass="FaceDetailViewController" customModule="faces" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uvP-rS-5KH"/>
                         <viewControllerLayoutGuide type="bottom" id="PAU-dO-cXd"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-FN-aKr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-FN-aKr">
                                 <rect key="frame" x="88" y="104" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="22i-Rf-Rn8"/>
@@ -93,6 +93,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="LOb-vd-3Um"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contactName" destination="7vY-uB-CaY" id="wUE-x8-SZD"/>
+                        <outlet property="emoji" destination="d0C-YQ-1zn" id="sBJ-ny-WUI"/>
+                        <outlet property="faceImageView" destination="zcU-FN-aKr" id="CNp-sK-tke"/>
+                        <outlet property="lastEmoji" destination="raF-lC-sT2" id="ecd-Lq-17A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beM-fs-yMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -413,4 +419,7 @@
             <point key="canvasLocation" x="798.39999999999998" y="248.97333333333333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FacePlaceHolder" width="225" height="225"/>
+    </resources>
 </document>

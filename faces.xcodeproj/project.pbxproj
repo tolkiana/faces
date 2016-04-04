@@ -36,6 +36,7 @@
 		38F1944F1BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
+		4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		38F194431BCC8FED00FB2C35 /* facesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F1944C1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
+		4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +247,7 @@
 		38B7337E1C717045008F2843 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B7BC17B1CB2020900AAE785 /* New Group */,
+				4B7BC17B1CB2020900AAE785 /* FaceDetailViewController */,
 				4B7BC17A1CB1F9FE00AAE785 /* FaceTableViewController */,
 				38172F791CA62EE10087BDC6 /* EmojiPickerViewController */,
 				384FBB461C9F8F43001ACE9B /* FaceViewController */,
@@ -390,11 +392,12 @@
 			name = FaceTableViewController;
 			sourceTree = "<group>";
 		};
-		4B7BC17B1CB2020900AAE785 /* New Group */ = {
+		4B7BC17B1CB2020900AAE785 /* FaceDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */,
 			);
-			name = "New Group";
+			name = FaceDetailViewController;
 			sourceTree = "<group>";
 		};
 		4BF5E2311BF182DA00CCF95F /* Models */ = {
@@ -676,6 +679,7 @@
 				38B733821C717198008F2843 /* Face.swift in Sources */,
 				384FBB4A1C9F8F97001ACE9B /* FaceViewDelegate.swift in Sources */,
 				38172F7B1CA62EF60087BDC6 /* EmojiPickerViewController.swift in Sources */,
+				4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */,
 				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
 				384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */,
