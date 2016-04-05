@@ -25,7 +25,7 @@ class FaceViewModelFromFace: FaceViewModel {
         self.image = UIImage(named: face.imageName)
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         
         self.date = dateFormatter.stringFromDate(face.lastEmojiDate)
         
