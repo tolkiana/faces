@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreImage
+import UIKit
 
 class FSImageUtility {
 
@@ -64,20 +65,19 @@ class FSImageUtility {
         return faces;
     }
     
-    func maskRoundedImage(image: UIImage, radius: Float) -> UIImage {
-        let imageView: UIImageView = UIImageView(image: image)
-        var layer: CALayer = CALayer()
-        layer = imageView.layer
-        
-        layer.masksToBounds = true
-        layer.cornerRadius = CGFloat(radius)
-        
+    func maskRoundedImage(image: UIImage) -> UIImage? {
+        let square = CGSize(width: min(image.size.width, image.size.height), height: min(image.size.width, image.size.height))
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+        imageView.contentMode = .ScaleAspectFill
+        imageView.image = image
+        imageView.layer.cornerRadius = square.width/2
+        imageView.layer.masksToBounds = true
         UIGraphicsBeginImageContext(imageView.bounds.size)
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.renderInContext(context)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        return roundedImage
+        return result
     }
     
     // MARK: Private methods

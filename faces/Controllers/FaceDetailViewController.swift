@@ -27,11 +27,14 @@ class FaceDetailViewController: UIViewController {
         title = aface.alias
         contactName.text = aface.contact.firstName + " " + aface.contact.lastName
         emoji.text = aface.emoticon
-        faceImageView.image = UIImage(named: aface.imageName)
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         lastEmojiDate.text = dateFormatter.stringFromDate(aface.lastEmojiDate)
+        
+        guard let image = UIImage(named: aface.imageName) else {
+            return
+        }
+        faceImageView.image = FSImageUtility().maskRoundedImage(image)
     }
 }

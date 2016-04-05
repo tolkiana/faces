@@ -35,6 +35,7 @@
 		38F1944F1BCC8FED00FB2C35 /* facesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; };
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
+		4B5122291CB361170005AAD6 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
 		4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */; };
 		4B7BC17F1CB2071800AAE785 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17E1CB2071800AAE785 /* Contact.swift */; };
 		4B7BC1831CB21ABB00AAE785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7BC1811CB21ABB00AAE785 /* Main.storyboard */; };
@@ -697,6 +698,7 @@
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
 				384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */,
 				38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */,
+				4B5122291CB361170005AAD6 /* FSImageUtility.swift in Sources */,
 				38B7338B1C7171A6008F2843 /* FaceTableViewCell.swift in Sources */,
 				384FBB481C9F8F5E001ACE9B /* FaceViewController.swift in Sources */,
 				38C8BBF31BCC8EEA009B6D89 /* AppDelegate.swift in Sources */,
