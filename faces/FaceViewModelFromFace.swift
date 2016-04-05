@@ -14,7 +14,7 @@ class FaceViewModelFromFace: FaceViewModel {
     let date: String
     let alias: String
     let contactName: String
-    let image: UIImage?
+    var image: UIImage?
     let emoji: String
     
     init(face: Face) {
@@ -28,5 +28,10 @@ class FaceViewModelFromFace: FaceViewModel {
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         
         self.date = dateFormatter.stringFromDate(face.lastEmojiDate)
+        
+        guard let image = UIImage(named: face.imageName) else {
+            return
+        }
+        self.image = FSImageUtility().maskRoundedImage(image)
     }
 }

@@ -14,8 +14,8 @@ class FacesTableViewController: UIViewController, UITableViewDataSource, UITable
     static let sis = Contact(firstName: "Claudia", lastName: "Velazquez", phoneNumber: "2341563917")
     
     var faces: [Face] = [
-        Face(alias: "Sister", emoticon: "😜", imageName: "name", lastEmojiDate: NSDate(), contact: sis),
-        Face(alias: "Mom", emoticon: "😘", imageName: "name", lastEmojiDate: NSDate(), contact: mom)
+        Face(alias: "Sister", emoticon: "😜", imageName: "Sis", lastEmojiDate: NSDate(), contact: sis),
+        Face(alias: "Mom", emoticon: "😘", imageName: "Mom", lastEmojiDate: NSDate(), contact: mom)
     ]
 
     private var selectedFace: Face?
