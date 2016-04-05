@@ -18,7 +18,6 @@ class FaceViewModelFromFace: FaceViewModel {
     let emoji: String
     
     init(face: Face) {
-        
         self.alias = face.alias
         self.contactName = face.contact.firstName + " " + face.contact.lastName
         self.emoji = face.emoticon
@@ -26,7 +25,6 @@ class FaceViewModelFromFace: FaceViewModel {
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        
         self.date = dateFormatter.stringFromDate(face.lastEmojiDate)
         
         guard let image = UIImage(named: face.imageName) else {

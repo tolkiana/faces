@@ -17,7 +17,6 @@ class FaceViewModelFromContact: FaceViewModel {
     let emoji: String
     
     init(contact: Contact) {
-        
         self.alias = ""
         self.contactName = contact.firstName + " " + contact.lastName
         self.emoji = "😀"
