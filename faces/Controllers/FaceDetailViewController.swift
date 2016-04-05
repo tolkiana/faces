@@ -15,14 +15,19 @@ class FaceDetailViewController: UIViewController {
     @IBOutlet var contactName: UILabel!
     @IBOutlet var emoji: UILabel!
     @IBOutlet var faceImageView: UIImageView!
+
+    var viewModel: FaceViewModel?
     
-    var viewModel: FaceViewModel? {
-        didSet {
-            lastEmojiDate.text = viewModel?.date
-            contactName.text = viewModel?.contactName
-            emoji.text = viewModel?.emoji
-            faceImageView.image = viewModel?.image
-            title = viewModel?.alias
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let _ = viewModel else {
+            return
         }
+        lastEmojiDate.text = viewModel?.date
+        contactName.text = viewModel?.contactName
+        emoji.text = viewModel?.emoji
+        faceImageView.image = viewModel?.image
+        title = viewModel?.alias
     }
 }
