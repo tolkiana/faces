@@ -35,6 +35,21 @@ class FaceDetailViewController: UIViewController {
         guard let image = UIImage(named: aface.imageName) else {
             return
         }
-        faceImageView.image = FSImageUtility().maskRoundedImage(image)
+        faceImageView.image = maskRoundedImage(image)
+    }
+    
+    func maskRoundedImage(image: UIImage) -> UIImage? {
+        let square = CGSize(width: min(image.size.width, image.size.height), height: min(image.size.width, image.size.height))
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+        imageView.contentMode = .ScaleAspectFill
+        imageView.image = image
+        imageView.layer.cornerRadius = square.width/2
+        imageView.layer.masksToBounds = true
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.renderInContext(context)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
     }
 }
