@@ -17,6 +17,7 @@ class FaceDetailViewController: UIViewController {
     @IBOutlet var faceImageView: UIImageView!
     
     var face: Face?
+    // New requirement, add a Contact property
     
     override func viewDidLoad() {
         super.viewDidLoad()
