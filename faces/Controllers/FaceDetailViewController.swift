@@ -21,9 +21,6 @@ class FaceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let _ = viewModel else {
-            return
-        }
         lastEmojiDate.text = viewModel?.date
         contactName.text = viewModel?.contactName
         emoji.text = viewModel?.emoji

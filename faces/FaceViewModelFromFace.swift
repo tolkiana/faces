@@ -21,7 +21,6 @@ class FaceViewModelFromFace: FaceViewModel {
         self.alias = face.alias
         self.contactName = face.contact.firstName + " " + face.contact.lastName
         self.emoji = face.emoticon
-        self.image = UIImage(named: face.imageName)
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
