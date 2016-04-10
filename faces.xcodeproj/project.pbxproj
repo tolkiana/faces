@@ -36,6 +36,7 @@
 		38F194501BCC8FED00FB2C35 /* facesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1943A1BCC8FED00FB2C35 /* facesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38F1945B1BCC917500FB2C35 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
 		4B5122291CB361170005AAD6 /* FSImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */; };
+		4B646E991CB9E5D000D20CA3 /* Face+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B646E981CB9E5D000D20CA3 /* Face+Presentation.swift */; };
 		4B7BC17D1CB2030F00AAE785 /* FaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */; };
 		4B7BC17F1CB2071800AAE785 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC17E1CB2071800AAE785 /* Contact.swift */; };
 		4B7BC1831CB21ABB00AAE785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7BC1811CB21ABB00AAE785 /* Main.storyboard */; };
@@ -168,6 +169,7 @@
 		38F194431BCC8FED00FB2C35 /* facesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F1944C1BCC8FED00FB2C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F1945A1BCC917500FB2C35 /* FSImageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageUtility.swift; sourceTree = "<group>"; };
+		4B646E981CB9E5D000D20CA3 /* Face+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Face+Presentation.swift"; sourceTree = "<group>"; };
 		4B7BC17C1CB2030F00AAE785 /* FaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetailViewController.swift; sourceTree = "<group>"; };
 		4B7BC17E1CB2071800AAE785 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		4B7BC1821CB21ABB00AAE785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				38B733801C71713E008F2843 /* Enums */,
 				38B7337B1C710DA4008F2843 /* Constants */,
 				38B7337F1C717055008F2843 /* Views */,
+				4B646E971CB9E5A200D20CA3 /* Extensions */,
 				38B7337E1C717045008F2843 /* Controllers */,
 				4BF5E2311BF182DA00CCF95F /* Models */,
 				38C8BBF21BCC8EEA009B6D89 /* AppDelegate.swift */,
@@ -385,6 +388,14 @@
 				38F1944C1BCC8FED00FB2C35 /* Info.plist */,
 			);
 			path = facesKitTests;
+			sourceTree = "<group>";
+		};
+		4B646E971CB9E5A200D20CA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B646E981CB9E5D000D20CA3 /* Face+Presentation.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		4B7BC17A1CB1F9FE00AAE785 /* FaceTableViewController */ = {
@@ -696,6 +707,7 @@
 				38B7338C1C7171A6008F2843 /* TextFiledViewCell.swift in Sources */,
 				4B7BC17F1CB2071800AAE785 /* Contact.swift in Sources */,
 				38B733921C717299008F2843 /* EmojiViewCell.swift in Sources */,
+				4B646E991CB9E5D000D20CA3 /* Face+Presentation.swift in Sources */,
 				384FBB4C1C9F8FB4001ACE9B /* FaceViewDataSource.swift in Sources */,
 				38B733871C71719F008F2843 /* FacesTableViewController.swift in Sources */,
 				4B5122291CB361170005AAD6 /* FSImageUtility.swift in Sources */,
