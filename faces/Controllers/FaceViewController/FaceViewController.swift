@@ -31,12 +31,12 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
         self.tableView.delegate = self.delegate
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("keyboardWillShow:"),
+            selector: #selector(FaceViewController.keyboardWillShow(_:)),
             name: UIKeyboardWillShowNotification,
             object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("keyboardWillHide:"),
+            selector: #selector(FaceViewController.keyboardWillHide(_:)),
             name: UIKeyboardWillHideNotification,
             object: nil)
     }
