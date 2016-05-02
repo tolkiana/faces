@@ -12,7 +12,7 @@ enum TableSection: Int  {
     case Image, Info
 }
 
-class FaceViewController: UIViewController, UITextFieldDelegate {
+class FaceViewController: UIViewController {
 
     // Oulets
     @IBOutlet var doneButton: UIBarButtonItem!
@@ -55,36 +55,6 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
     
     }
     
-    // MARK: UITextFieldDelegate
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        self.activeTextField = textField
-        
-        guard let cell = textField.superview?.superview as? TextFiledViewCell,
-            let textFieldType = cell.type else {
-            return
-        }
-        
-        switch textFieldType {
-        case .Emoji:
-            textField.resignFirstResponder()
-            slideEmojiViewUp()
-        case .Contact:
-            print("Show Contancts")
-        default:
-            print("Do nothing")
-        }
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        self.activeTextField = textField
-    }
-    
     func slideEmojiViewUp() {
         UIView.animateWithDuration(2.0) { () -> Void in
             self.emojiVisibleHeight.constant = 250
@@ -113,5 +83,36 @@ class FaceViewController: UIViewController, UITextFieldDelegate {
         }
         
         tableView.contentInset = contentInset
+    }
+}
+
+extension FaceViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        self.activeTextField = textField
+        
+        guard let cell = textField.superview?.superview as? TextFiledViewCell,
+            let textFieldType = cell.type else {
+                return
+        }
+        
+        switch textFieldType {
+        case .Emoji:
+            textField.resignFirstResponder()
+            slideEmojiViewUp()
+        case .Contact:
+            print("Show Contancts")
+        default:
+            print("Do nothing")
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.activeTextField = textField
     }
 }
